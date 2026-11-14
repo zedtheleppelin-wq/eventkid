@@ -1,0 +1,7 @@
+# Seiten, die täglich nach Terminen durchsucht werden – eine Adresse pro Zeile.
+# Zeilen mit # werden ignoriert. Seiten, die nur mit JavaScript Inhalte laden, liefern wenig.
+https://www.kindaling.de/veranstaltungen/berlin
+https://www.kindaling.de/kindertheater-shows/berlin
+https://www.kindaling.de/feste/berlin
+https://www.berlin.de/kultur-und-tickets/tipps/kinder/
+https://www.berlin.de/weihnachtsmarkt/

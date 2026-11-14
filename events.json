@@ -1,0 +1,383 @@
+{
+  "status": {
+    "letzteSuche": "2026-11-14T08:25:00+01:00",
+    "horizontTage": 28
+  },
+  "events": [
+    {
+      "alter": "2–12 Jahre",
+      "beschreibung": "Ein Vormittag mit Mitmachaktionen, Vorlesen und Basteln für die ganze Familie.",
+      "bezirk": "Friedrichshain",
+      "datum": "2026-11-14",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "kunst"
+      ],
+      "lat": 52.5155,
+      "link": "https://www.kindaling.de/feste/familientag-bezirkszentralbibliothek-pablo-neruda-2-12-j/berlin-friedrichshain",
+      "lng": 13.454,
+      "ort": "Bezirkszentralbibliothek Pablo Neruda",
+      "pankow": false,
+      "preis": "kostenlos",
+      "quelle": "kindaling.de",
+      "titel": "Familientag in der Pablo-Neruda-Bibliothek",
+      "zeit": "10:00",
+      "id": "2026-11-14-familientag-pablo-neruda"
+    },
+    {
+      "alter": "Kleinkinder",
+      "beschreibung": "Lustige Mitmachshow rund um Müll, Natur und Umweltschutz, am Tag der offenen Tür der Bibliothek.",
+      "bezirk": "Weißensee",
+      "datum": "2026-11-14",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": false,
+      "kategorien": [
+        "indoor",
+        "theater",
+        "natur"
+      ],
+      "lat": 52.553,
+      "link": "https://www.kindaling.de/kindertheater-shows/der-gruene-georg-show-zum-umweltschutz-fuer-kinder-mit-georg-wolfdietrich-schnurre-bibliothek/berlin-weissensee",
+      "lng": 13.456,
+      "ort": "Wolfdietrich-Schnurre-Bibliothek",
+      "pankow": true,
+      "preis": "",
+      "quelle": "kindaling.de",
+      "titel": "Der Grüne Georg – Umweltshow für Kinder",
+      "zeit": "11:00",
+      "id": "2026-11-14-gruener-georg-weissensee"
+    },
+    {
+      "alter": "ab 4 Jahren",
+      "beschreibung": "Internationale Kurzfilme für Kinder, mit eigenen Programmen für die Jüngsten. Letzter Festivaltag am Sonntag.",
+      "bezirk": "Prenzlauer Berg",
+      "bis": "2026-11-15",
+      "datum": "2026-11-08",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "kunst"
+      ],
+      "lat": 52.5392,
+      "link": "https://www.kindaling.de/feste/kuki-junges-kurzfilmfestival-berlin/berlin-prenzlauer-berg",
+      "lng": 13.4128,
+      "ort": "KUKI Festival",
+      "pankow": true,
+      "preis": "ab 4 €",
+      "quelle": "kindaling.de",
+      "titel": "KUKI – Junges Kurzfilmfestival",
+      "zeit": "",
+      "id": "2026-11-14-kuki-kurzfilmfestival"
+    },
+    {
+      "alter": "Kinder & Familien",
+      "beschreibung": "Tanzen mit Kindermusik im großen Haus am Spreeufer.",
+      "bezirk": "Tiergarten",
+      "datum": "2026-11-15",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "musik",
+        "bewegung"
+      ],
+      "lat": 52.5186,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.365,
+      "ort": "Haus der Kulturen der Welt",
+      "pankow": false,
+      "preis": "",
+      "quelle": "kindaling.de",
+      "titel": "Kinderdisco im Haus der Kulturen der Welt",
+      "zeit": "",
+      "id": "2026-11-15-kinderdisco-hkw"
+    },
+    {
+      "alter": "ab 4 Jahren",
+      "beschreibung": "Frecher Theaterspaß nach dem Bilderbuch von Marc-Uwe Kling. Weitere Vorstellungen am 15. bis 17. Dezember.",
+      "bezirk": "Wedding",
+      "datum": "2026-11-15",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "theater",
+        "musik"
+      ],
+      "lat": 52.5467,
+      "link": "https://www.berlin.de/tickets/kinder/das-neinhorn-07b29726-0962-4dc0-8d73-6ee5d5ead427/",
+      "lng": 13.353,
+      "ort": "Atze Musiktheater, Studiobühne",
+      "pankow": false,
+      "preis": "",
+      "quelle": "berlin.de",
+      "titel": "Das Neinhorn",
+      "zeit": "15:00",
+      "id": "2026-11-15-neinhorn-atze"
+    },
+    {
+      "alter": "Familien",
+      "beschreibung": "Wintermarkt mit eigenem Rahmenprogramm für Kinder und Familien.",
+      "bezirk": "Mitte",
+      "bis": "2027-01-03",
+      "datum": "2026-11-18",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "lat": 52.517,
+      "link": "https://www.visitberlin.de/de/wintermarkt-schlossplatz-am-humboldt-forum",
+      "lng": 13.402,
+      "ort": "Schlossplatz",
+      "pankow": false,
+      "preis": "Eintritt frei",
+      "quelle": "visitberlin.de",
+      "titel": "Wintermarkt am Humboldt Forum",
+      "zeit": "",
+      "id": "2026-11-18-wintermarkt-humboldt-forum"
+    },
+    {
+      "alter": "0–2 Jahre",
+      "beschreibung": "Offener Treff mit Bilderbüchern, Fingerspielen und Liedern für Babys und Kleinkinder. Läuft wöchentlich bis Mitte Dezember.",
+      "bezirk": "Prenzlauer Berg",
+      "datum": "2026-11-19",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor"
+      ],
+      "lat": 52.539,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.435,
+      "ort": "Stadtbibliothek Pankow",
+      "pankow": true,
+      "preis": "kostenlos",
+      "quelle": "kindaling.de",
+      "titel": "Eltern-Kind-Treff in der Bibliothek",
+      "zeit": "",
+      "id": "2026-11-19-eltern-kind-treff-pankow"
+    },
+    {
+      "alter": "ab 3 Jahren",
+      "beschreibung": "Festival mit hunderten Märchenlesungen, Erzähltheatern und Mitmachaktionen, auch in Bibliotheken im Kiez.",
+      "bezirk": "stadtweit",
+      "bis": "2026-11-22",
+      "datum": "2026-11-05",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "theater",
+        "indoor"
+      ],
+      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/",
+      "ort": "viele Orte in ganz Berlin",
+      "pankow": true,
+      "preis": "oft kostenlos",
+      "quelle": "berlin.de",
+      "titel": "Berliner Märchentage",
+      "zeit": "",
+      "id": "2026-11-22-maerchentage"
+    },
+    {
+      "alter": "ab 2 Jahren",
+      "beschreibung": "Skandinavischer Weihnachtsmarkt mit Kinderkarussell, Bastelworkshops und täglichem Besuch vom Weihnachtsmann.",
+      "bezirk": "Prenzlauer Berg",
+      "bis": "2026-12-22",
+      "datum": "2026-11-23",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "outdoor",
+        "fest",
+        "kunst"
+      ],
+      "lat": 52.539,
+      "link": "https://www.berlin.de/weihnachtsmarkt/3240367-3496862-lucia-weihnachtsmarkt-in-der-kulturbraue.html",
+      "lng": 13.4135,
+      "ort": "Kulturbrauerei, Knaackstraße 97",
+      "pankow": true,
+      "preis": "Eintritt frei",
+      "quelle": "berlin.de",
+      "titel": "Lucia-Weihnachtsmarkt in der Kulturbrauerei",
+      "zeit": "Mo–Fr ab 15, Sa/So ab 13 Uhr",
+      "id": "2026-11-23-lucia-weihnachtsmarkt"
+    },
+    {
+      "alter": "Kleinkinder",
+      "beschreibung": "Geschichten erzählt mitten auf dem Spielplatz, warm anziehen.",
+      "bezirk": "Prenzlauer Berg",
+      "datum": "2026-11-24",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "outdoor",
+        "theater"
+      ],
+      "lat": 52.5336,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.4318,
+      "ort": "Spielplatz Arnswalder Platz (Kurt-Tucholsky-Bibliothek)",
+      "pankow": true,
+      "preis": "kostenlos",
+      "quelle": "kindaling.de",
+      "titel": "Erzähltheater auf dem Arnswalder Platz",
+      "zeit": "",
+      "id": "2026-11-24-erzaehltheater-arnswalder"
+    },
+    {
+      "alter": "Eltern mit Babys",
+      "beschreibung": "Kinovorstellung für Eltern, bei der Babys dabei sein dürfen: gedämpfter Ton, etwas Licht, Platz für Kinderwagen.",
+      "bezirk": "Mitte",
+      "datum": "2026-11-25",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor"
+      ],
+      "lat": 52.526,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.4105,
+      "ort": "Kino Babylon",
+      "pankow": false,
+      "preis": "ab 9 €",
+      "quelle": "kindaling.de",
+      "titel": "Kinderwagenkino im Babylon",
+      "zeit": "11:00",
+      "id": "2026-11-25-kinderwagenkino-babylon"
+    },
+    {
+      "alter": "Kita-Kinder",
+      "beschreibung": "Orchesterkonzert mit Puppenspiel: Bär, Affe, Löwe und Tiger erleben ein Abenteuer. Kuscheltier mitbringen!",
+      "bezirk": "Charlottenburg",
+      "datum": "2026-11-25",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "musik",
+        "theater"
+      ],
+      "lat": 52.5115,
+      "link": "https://www.berlin.de/tickets/kinder/das-kuscheltierkonzert/2026-11-25-n-a-3ad5ad2e-dee1-41bc-a561-2d26ace71170/",
+      "lng": 13.321,
+      "ort": "Komische Oper im Schillertheater",
+      "pankow": false,
+      "preis": "",
+      "quelle": "berlin.de",
+      "titel": "Das Kuscheltierkonzert",
+      "zeit": "11:00",
+      "id": "2026-11-25-kuscheltierkonzert"
+    },
+    {
+      "alter": "Kita-Kinder",
+      "beschreibung": "Märchen zum Mitmachen: Die Kinder rufen Ideen rein und dürfen mit auf die Bühne. Weitere Termine bis Ende Januar.",
+      "bezirk": "Mitte",
+      "datum": "2026-11-27",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "lat": 52.5245,
+      "link": "https://www.berlin.de/en/tickets/kids/froschkoenig-mitspieltheater/2026-11-27-froschkoenig-mitspieltheater-32458457-dbc2-4d69-bc14-7ed84396a20a/",
+      "lng": 13.396,
+      "ort": "Galli Theater, Oranienburger Str. 32",
+      "pankow": false,
+      "preis": "ab 14,61 €",
+      "quelle": "berlin.de",
+      "titel": "Froschkönig – Mitspieltheater",
+      "zeit": "17:00",
+      "id": "2026-11-27-froschkoenig-galli"
+    },
+    {
+      "alter": "Familien",
+      "beschreibung": "Kleiner Adventsmarkt mit Kunsthandwerk und Leckereien, an allen Adventssonntagen.",
+      "bezirk": "Prenzlauer Berg",
+      "datum": "2026-11-29",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "lat": 52.5363,
+      "link": "https://www.visitberlin.de/de/adventsoekomarkt-kollwitzplatz-berlin",
+      "lng": 13.4175,
+      "ort": "Kollwitzplatz",
+      "pankow": true,
+      "preis": "Eintritt frei",
+      "quelle": "visitberlin.de",
+      "titel": "Öko-Adventsmarkt am Kollwitzplatz",
+      "zeit": "12:00–19:00",
+      "id": "2026-11-29-adventsmarkt-kollwitzplatz"
+    },
+    {
+      "alter": "Familien",
+      "beschreibung": "Zweiter Advent: Kunsthandwerk, Leckereien und Nikolausstimmung im Kiez.",
+      "bezirk": "Prenzlauer Berg",
+      "datum": "2026-12-06",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "lat": 52.5363,
+      "link": "https://www.visitberlin.de/de/adventsoekomarkt-kollwitzplatz-berlin",
+      "lng": 13.4175,
+      "ort": "Kollwitzplatz",
+      "pankow": true,
+      "preis": "Eintritt frei",
+      "quelle": "visitberlin.de",
+      "titel": "Öko-Adventsmarkt am Kollwitzplatz",
+      "zeit": "12:00–19:00",
+      "id": "2026-12-06-adventsmarkt-kollwitzplatz"
+    },
+    {
+      "alter": "3–11 Jahre",
+      "beschreibung": "Kleines Figurentheater mit Zirkusgeschichte für Kita- und Grundschulkinder.",
+      "bezirk": "Mitte",
+      "datum": "2026-12-06",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "link": "https://www.kindaling.de/kindertheater-shows/berlin?page=39",
+      "ort": "Theater Coq au Vin",
+      "pankow": false,
+      "preis": "ab 12 €",
+      "quelle": "kindaling.de",
+      "titel": "Die geheimnisvolle Truhe und die Zirkusmaus",
+      "zeit": "",
+      "id": "2026-12-06-zirkusmaus-coq-au-vin"
+    },
+    {
+      "alter": "3–11 Jahre",
+      "beschreibung": "Töpfe, Löffel und Kochlöffel werden zu Zirkusartisten.",
+      "bezirk": "Mitte",
+      "datum": "2026-12-13",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "link": "https://www.kindaling.de/kindertheater-shows/berlin?page=39",
+      "ort": "Theater Coq au Vin",
+      "pankow": false,
+      "preis": "ab 12 €",
+      "quelle": "kindaling.de",
+      "titel": "Der furiose Küchenzirkus",
+      "zeit": "",
+      "id": "2026-12-13-kuechenzirkus-coq-au-vin"
+    }
+  ]
+}

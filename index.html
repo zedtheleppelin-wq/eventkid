@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#eef6ff">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kinderkalender">
+<title>Kinderkalender Berlin</title>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: eine Spalte wie ein Bilderbuch-Planer – Wolkenkopf, Umschalter Liste/Kalender, Filter als Bonbon-Chips, Tage als bunte Karten */
+:root{
+  --bg:#eef6ff; --bg2:#fff6fb; --surface:#ffffff; --ink:#2c2a4a; --muted:#6f6b92; --line:#dcdcf2;
+  --sun:#ffcf3f; --pink:#ff7eb6; --mint:#4fd1a5; --sky:#5fb3ff; --lilac:#a98bff; --peach:#ff9f6b;
+  --new:#ff4f8b; --shadow:0 4px 0 #d9d6f3;
+  --c-indoor:#a98bff; --c-outdoor:#3fbf8f; --c-musik:#ff9f6b; --c-kunst:#ff7eb6; --c-theater:#5fb3ff;
+  --c-natur:#7cc84a; --c-bewegung:#2fc2d6; --c-fest:#f5b400; --c-museum:#8f7cf0; --c-workshop:#e8608f;
+  --display:"Baloo 2","Comic Sans MS","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1b1a33; --bg2:#231f3d; --surface:#2a2748; --ink:#f3f1ff; --muted:#b4afd9; --line:#3d3966;
+  --sun:#ffd95e; --pink:#ff94c4; --mint:#5fe0b5; --sky:#7cc2ff; --lilac:#bba4ff; --peach:#ffb48a;
+  --new:#ff6a9e; --shadow:0 4px 0 #14132a;
+  --c-indoor:#bba4ff; --c-outdoor:#5fe0b5; --c-musik:#ffb48a; --c-kunst:#ff94c4; --c-theater:#7cc2ff;
+  --c-natur:#a3e06e; --c-bewegung:#5fd8e8; --c-fest:#ffd95e; --c-museum:#ada0ff; --c-workshop:#ff8fb3;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b1a33; --bg2:#231f3d; --surface:#2a2748; --ink:#f3f1ff; --muted:#b4afd9; --line:#3d3966;
+  --sun:#ffd95e; --pink:#ff94c4; --mint:#5fe0b5; --sky:#7cc2ff; --lilac:#bba4ff; --peach:#ffb48a;
+  --new:#ff6a9e; --shadow:0 4px 0 #14132a;
+  --c-indoor:#bba4ff; --c-outdoor:#5fe0b5; --c-musik:#ffb48a; --c-kunst:#ff94c4; --c-theater:#7cc2ff;
+  --c-natur:#a3e06e; --c-bewegung:#5fd8e8; --c-fest:#ffd95e; --c-museum:#ada0ff; --c-workshop:#ff8fb3;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;
+  background-image:radial-gradient(circle at 12% 8%,color-mix(in srgb,var(--pink) 14%,transparent) 0 120px,transparent 121px),
+    radial-gradient(circle at 92% 22%,color-mix(in srgb,var(--sun) 18%,transparent) 0 90px,transparent 91px),
+    radial-gradient(circle at 80% 85%,color-mix(in srgb,var(--mint) 12%,transparent) 0 140px,transparent 141px);
+  background-attachment:fixed}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 48px;display:flex;flex-direction:column;gap:16px}
+
+/* Kopf */
+header{position:relative;background:var(--surface);border:3px solid var(--ink);border-radius:28px;padding:18px 18px 16px;box-shadow:0 6px 0 var(--ink);overflow:hidden}
+header svg.deko{position:absolute;right:-6px;top:-8px;width:140px;height:110px;pointer-events:none}
+h1{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;margin:0;padding-right:110px;text-wrap:balance}
+h1 span{color:var(--pink)}
+.sub{color:var(--muted);margin:6px 0 10px;font-weight:600;padding-right:90px}
+.status{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted);font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:3px 11px;border-radius:999px;background:var(--bg);font-variant-numeric:tabular-nums;color:var(--ink);font-weight:700}
+.pill.neu{background:var(--new);color:#fff}
+
+/* Umschalter */
+.toggle{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--surface);border:3px solid var(--ink);border-radius:999px;padding:4px;gap:4px}
+.toggle button{font:inherit;font-family:var(--display);font-weight:700;font-size:16px;border:0;border-radius:999px;padding:8px 10px;background:transparent;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.toggle button[aria-pressed="true"]{background:var(--sun);color:#2c2a4a}
+
+/* Filter */
+.filters{display:flex;flex-direction:column;gap:8px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;margin-inline:-6px;padding-inline:6px;border-radius:0 0 18px 18px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px}
+.row::-webkit-scrollbar{display:none}
+button.chip{font:inherit;font-size:13px;font-weight:800;flex:none;cursor:pointer;border:2px solid var(--line);background:var(--surface);color:var(--ink);padding:5px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;transition:transform .12s}
+button.chip .ic{font-size:15px;line-height:1}
+button.chip[aria-pressed="true"]{background:var(--c,var(--ink));border-color:var(--c,var(--ink));color:#fff;box-shadow:0 3px 0 color-mix(in srgb,var(--c,var(--ink)) 55%,#000)}
+.row.zeit button.chip[aria-pressed="true"],.row.gebiet button.chip[aria-pressed="true"]{--c:var(--lilac)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+
+/* Liste */
+.day{display:flex;flex-direction:column;gap:10px}
+.day h2{font-family:var(--display);font-weight:800;font-size:20px;margin:8px 0 0;display:flex;align-items:baseline;gap:8px}
+.day h2 small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:700}
+.card{position:relative;background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:14px 14px 12px 14px;display:grid;grid-template-columns:62px 1fr auto;gap:2px 12px;min-width:0;box-shadow:var(--shadow)}
+.bubble{grid-row:span 3;align-self:start;width:62px;min-height:62px;border-radius:20px;background:color-mix(in srgb,var(--c) 22%,var(--surface));color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4px;gap:0}
+.bubble .ic{font-size:24px;line-height:1.1}
+.bubble .t{font-weight:800;font-size:12px;font-variant-numeric:tabular-nums;line-height:1.15}
+.title{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.15;margin:0;min-width:0;text-wrap:balance}
+.neu{display:inline-block;font-family:var(--body);font-size:11px;font-weight:800;color:#fff;background:var(--new);padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:3px;transform:rotate(-4deg)}
+.where{color:var(--muted);font-size:13px;font-weight:700;grid-column:2/4;min-width:0}
+.desc{grid-column:2/4;margin:4px 0 0;font-size:14px;min-width:0}
+.meta{grid-column:1/4;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.tag{font-size:12px;font-weight:800;padding:2px 9px;border-radius:999px;color:var(--ink);background:color-mix(in srgb,var(--c) 25%,transparent)}
+.info{font-size:12px;color:var(--muted);font-weight:700;padding:2px 2px}
+.meta a{margin-left:auto;font-size:13px;font-weight:800;color:#fff;background:var(--sky);text-decoration:none;white-space:nowrap;padding:5px 12px;border-radius:999px}
+button.star{background:none;border:0;cursor:pointer;font-size:24px;line-height:1;color:var(--line);padding:0 2px;align-self:start;transition:transform .15s}
+button.star[aria-pressed="true"]{color:var(--sun)}
+button.star:active{transform:scale(1.3)}
+.empty{background:var(--surface);border:2px dashed var(--line);border-radius:22px;padding:26px 20px;text-align:center;color:var(--muted);font-weight:600}
+.empty strong{display:block;color:var(--ink);font-family:var(--display);font-weight:700;font-size:20px;margin-bottom:4px}
+.empty .big{font-size:40px;display:block;margin-bottom:4px}
+
+/* Kalender */
+.cal{background:var(--surface);border:3px solid var(--ink);border-radius:26px;padding:14px;box-shadow:0 6px 0 var(--ink)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.cal-head h2{font-family:var(--display);font-weight:800;font-size:22px;margin:0}
+.cal-head button{font:inherit;font-weight:800;font-size:18px;width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.wd{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;text-align:center;color:var(--muted);padding-bottom:2px}
+.cell{font:inherit;aspect-ratio:1/1.05;max-width:100%;border:2px solid transparent;border-radius:14px;background:var(--bg);color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:4px 2px;gap:3px;min-width:0;position:relative}
+.cell .n{font-weight:800;font-size:14px;font-variant-numeric:tabular-nums;line-height:1.2}
+.cell.out{background:transparent;cursor:default;opacity:.35}
+.cell.past{opacity:.45}
+.cell.we .n{color:var(--pink)}
+.cell.today{border-color:var(--sun);background:color-mix(in srgb,var(--sun) 22%,var(--bg))}
+.cell.sel{border-color:var(--ink);background:var(--surface);box-shadow:0 3px 0 var(--ink)}
+.dots{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;max-width:100%}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--c)}
+.dots b{font-size:10px;font-weight:800;color:var(--muted);line-height:7px}
+.cell .lauf{position:absolute;left:5px;right:5px;bottom:4px;height:3px;border-radius:3px;background:repeating-linear-gradient(90deg,var(--mint) 0 6px,var(--sun) 6px 12px,var(--pink) 12px 18px);opacity:.8}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);font-weight:700;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend .lauf-l{width:18px;height:3px;border-radius:3px;background:repeating-linear-gradient(90deg,var(--mint) 0 6px,var(--sun) 6px 12px,var(--pink) 12px 18px)}
+.legend .dot-l{width:7px;height:7px;border-radius:50%;background:var(--lilac)}
+.sub-h{font-family:var(--display);font-weight:700;font-size:15px;color:var(--muted);margin:4px 0 -2px}
+
+/* Karte */
+.map{background:var(--surface);border:3px solid var(--ink);border-radius:26px;padding:10px;box-shadow:0 6px 0 var(--ink)}
+.map svg{display:block;width:100%;height:auto;max-width:100%}
+.map .ring{fill:color-mix(in srgb,var(--mint) 18%,transparent);stroke:var(--mint);stroke-width:5;stroke-linejoin:round}
+.map .pankow{fill:color-mix(in srgb,var(--lilac) 14%,transparent);stroke:var(--lilac);stroke-width:2;stroke-dasharray:6 5}
+.map .spree{fill:none;stroke:var(--sky);stroke-width:4;stroke-linecap:round;opacity:.55}
+.map text.lbl{font-family:var(--body);font-weight:800;font-size:10px;fill:var(--muted);letter-spacing:.03em}
+.map text.big{font-family:var(--display);font-weight:800;font-size:13px;fill:var(--ink);opacity:.55}
+.map g.pin{cursor:pointer}
+.map g.pin circle.p{stroke:var(--surface);stroke-width:2.5}
+.map g.pin.sel circle.p{stroke:var(--ink);stroke-width:3}
+.map g.pin text{font-size:11px;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.map g.pin:focus-visible circle.p{stroke:var(--sky);stroke-width:4}
+.map-hint{font-size:12px;color:var(--muted);font-weight:700;margin:6px 4px 0}
+.meta a.route{background:var(--mint);margin-left:0}
+.meta a.route + a{margin-left:6px}
+.meta .links{margin-left:auto;display:flex;gap:6px}
+footer{font-size:12px;color:var(--muted);text-align:center;font-weight:600}
+@media (max-width:460px){h1{font-size:26px}header svg.deko{width:110px;height:90px}.card{grid-template-columns:54px 1fr auto}.bubble{width:54px;min-height:54px}.cell .n{font-size:13px}.dots i{width:6px;height:6px}}
+@media (prefers-reduced-motion:no-preference){
+  button.chip:active{transform:scale(.95)}
+  header svg .sunray{transform-origin:100px 40px;animation:spin 24s linear infinite}
+  header svg .cloud{animation:float 6s ease-in-out infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes float{50%{transform:translateX(-6px)}}
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="deko" viewBox="0 0 140 110" aria-hidden="true">
+      <g class="sunray" fill="none" stroke="var(--sun)" stroke-width="5" stroke-linecap="round">
+        <line x1="100" y1="4" x2="100" y2="14"/><line x1="100" y1="66" x2="100" y2="76"/>
+        <line x1="64" y1="40" x2="74" y2="40"/><line x1="126" y1="40" x2="136" y2="40"/>
+        <line x1="75" y1="15" x2="82" y2="22"/><line x1="118" y1="58" x2="125" y2="65"/>
+        <line x1="125" y1="15" x2="118" y2="22"/><line x1="82" y1="58" x2="75" y2="65"/>
+      </g>
+      <circle cx="100" cy="40" r="20" fill="var(--sun)"/>
+      <circle cx="93" cy="37" r="2.4" fill="#2c2a4a"/><circle cx="107" cy="37" r="2.4" fill="#2c2a4a"/>
+      <path d="M93 45 q7 6 14 0" fill="none" stroke="#2c2a4a" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="89" cy="44" r="3" fill="var(--pink)" opacity=".6"/><circle cx="111" cy="44" r="3" fill="var(--pink)" opacity=".6"/>
+      <g class="cloud"><path d="M40 92 a14 14 0 0 1 4-27 a18 18 0 0 1 34 4 a12 12 0 0 1 4 23 z" fill="var(--bg)" stroke="var(--line)" stroke-width="2"/></g>
+    </svg>
+    <h1>Kinder&shy;kalender <span>Berlin</span></h1>
+    <p class="sub">Für Kinder von 0 bis 6 · im S-Bahn-Ring und in Pankow</p>
+    <div class="status" id="status"><span class="pill">Lade Termine …</span></div>
+  </header>
+
+  <div class="toggle" role="group" aria-label="Ansicht">
+    <button type="button" id="v-liste" aria-pressed="true"><span aria-hidden="true">📋</span> Liste</button>
+    <button type="button" id="v-kal" aria-pressed="false"><span aria-hidden="true">📅</span> Kalender</button>
+    <button type="button" id="v-karte" aria-pressed="false"><span aria-hidden="true">🗺️</span> Karte</button>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter">
+    <div class="row zeit" id="f-zeit"></div>
+    <div class="row" id="f-kat"></div>
+    <div class="row gebiet" id="f-gebiet"></div>
+  </div>
+
+  <section id="cal" hidden></section>
+  <main id="list" aria-live="polite"></main>
+
+  <footer>Jeden Morgen sucht eine KI (Gemini) neue Angebote für die nächsten 4 Wochen.<br>Angaben ohne Gewähr, bitte vor dem Besuch beim Veranstalter prüfen.</footer>
+</div>
+
+<script id="daten" type="application/json">{"status": {"letzteSuche": "2026-11-14T08:25:00+01:00", "horizontTage": 28}, "events": [{"alter": "2–12 Jahre", "beschreibung": "Ein Vormittag mit Mitmachaktionen, Vorlesen und Basteln für die ganze Familie.", "bezirk": "Friedrichshain", "datum": "2026-11-14", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "kunst"], "lat": 52.5155, "link": "https://www.kindaling.de/feste/familientag-bezirkszentralbibliothek-pablo-neruda-2-12-j/berlin-friedrichshain", "lng": 13.454, "ort": "Bezirkszentralbibliothek Pablo Neruda", "pankow": false, "preis": "kostenlos", "quelle": "kindaling.de", "titel": "Familientag in der Pablo-Neruda-Bibliothek", "zeit": "10:00", "id": "2026-11-14-familientag-pablo-neruda"}, {"alter": "Kleinkinder", "beschreibung": "Lustige Mitmachshow rund um Müll, Natur und Umweltschutz, am Tag der offenen Tür der Bibliothek.", "bezirk": "Weißensee", "datum": "2026-11-14", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": false, "kategorien": ["indoor", "theater", "natur"], "lat": 52.553, "link": "https://www.kindaling.de/kindertheater-shows/der-gruene-georg-show-zum-umweltschutz-fuer-kinder-mit-georg-wolfdietrich-schnurre-bibliothek/berlin-weissensee", "lng": 13.456, "ort": "Wolfdietrich-Schnurre-Bibliothek", "pankow": true, "preis": "", "quelle": "kindaling.de", "titel": "Der Grüne Georg – Umweltshow für Kinder", "zeit": "11:00", "id": "2026-11-14-gruener-georg-weissensee"}, {"alter": "ab 4 Jahren", "beschreibung": "Internationale Kurzfilme für Kinder, mit eigenen Programmen für die Jüngsten. Letzter Festivaltag am Sonntag.", "bezirk": "Prenzlauer Berg", "bis": "2026-11-15", "datum": "2026-11-08", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "kunst"], "lat": 52.5392, "link": "https://www.kindaling.de/feste/kuki-junges-kurzfilmfestival-berlin/berlin-prenzlauer-berg", "lng": 13.4128, "ort": "KUKI Festival", "pankow": true, "preis": "ab 4 €", "quelle": "kindaling.de", "titel": "KUKI – Junges Kurzfilmfestival", "zeit": "", "id": "2026-11-14-kuki-kurzfilmfestival"}, {"alter": "Kinder & Familien", "beschreibung": "Tanzen mit Kindermusik im großen Haus am Spreeufer.", "bezirk": "Tiergarten", "datum": "2026-11-15", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "musik", "bewegung"], "lat": 52.5186, "link": "https://www.kindaling.de/veranstaltungen/berlin", "lng": 13.365, "ort": "Haus der Kulturen der Welt", "pankow": false, "preis": "", "quelle": "kindaling.de", "titel": "Kinderdisco im Haus der Kulturen der Welt", "zeit": "", "id": "2026-11-15-kinderdisco-hkw"}, {"alter": "ab 4 Jahren", "beschreibung": "Frecher Theaterspaß nach dem Bilderbuch von Marc-Uwe Kling. Weitere Vorstellungen am 15. bis 17. Dezember.", "bezirk": "Wedding", "datum": "2026-11-15", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "theater", "musik"], "lat": 52.5467, "link": "https://www.berlin.de/tickets/kinder/das-neinhorn-07b29726-0962-4dc0-8d73-6ee5d5ead427/", "lng": 13.353, "ort": "Atze Musiktheater, Studiobühne", "pankow": false, "preis": "", "quelle": "berlin.de", "titel": "Das Neinhorn", "zeit": "15:00", "id": "2026-11-15-neinhorn-atze"}, {"alter": "Familien", "beschreibung": "Wintermarkt mit eigenem Rahmenprogramm für Kinder und Familien.", "bezirk": "Mitte", "bis": "2027-01-03", "datum": "2026-11-18", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["outdoor", "fest"], "lat": 52.517, "link": "https://www.visitberlin.de/de/wintermarkt-schlossplatz-am-humboldt-forum", "lng": 13.402, "ort": "Schlossplatz", "pankow": false, "preis": "Eintritt frei", "quelle": "visitberlin.de", "titel": "Wintermarkt am Humboldt Forum", "zeit": "", "id": "2026-11-18-wintermarkt-humboldt-forum"}, {"alter": "0–2 Jahre", "beschreibung": "Offener Treff mit Bilderbüchern, Fingerspielen und Liedern für Babys und Kleinkinder. Läuft wöchentlich bis Mitte Dezember.", "bezirk": "Prenzlauer Berg", "datum": "2026-11-19", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor"], "lat": 52.539, "link": "https://www.kindaling.de/veranstaltungen/berlin", "lng": 13.435, "ort": "Stadtbibliothek Pankow", "pankow": true, "preis": "kostenlos", "quelle": "kindaling.de", "titel": "Eltern-Kind-Treff in der Bibliothek", "zeit": "", "id": "2026-11-19-eltern-kind-treff-pankow"}, {"alter": "ab 3 Jahren", "beschreibung": "Festival mit hunderten Märchenlesungen, Erzähltheatern und Mitmachaktionen, auch in Bibliotheken im Kiez.", "bezirk": "stadtweit", "bis": "2026-11-22", "datum": "2026-11-05", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["theater", "indoor"], "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/", "ort": "viele Orte in ganz Berlin", "pankow": true, "preis": "oft kostenlos", "quelle": "berlin.de", "titel": "Berliner Märchentage", "zeit": "", "id": "2026-11-22-maerchentage"}, {"alter": "ab 2 Jahren", "beschreibung": "Skandinavischer Weihnachtsmarkt mit Kinderkarussell, Bastelworkshops und täglichem Besuch vom Weihnachtsmann.", "bezirk": "Prenzlauer Berg", "bis": "2026-12-22", "datum": "2026-11-23", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["outdoor", "fest", "kunst"], "lat": 52.539, "link": "https://www.berlin.de/weihnachtsmarkt/3240367-3496862-lucia-weihnachtsmarkt-in-der-kulturbraue.html", "lng": 13.4135, "ort": "Kulturbrauerei, Knaackstraße 97", "pankow": true, "preis": "Eintritt frei", "quelle": "berlin.de", "titel": "Lucia-Weihnachtsmarkt in der Kulturbrauerei", "zeit": "Mo–Fr ab 15, Sa/So ab 13 Uhr", "id": "2026-11-23-lucia-weihnachtsmarkt"}, {"alter": "Kleinkinder", "beschreibung": "Geschichten erzählt mitten auf dem Spielplatz, warm anziehen.", "bezirk": "Prenzlauer Berg", "datum": "2026-11-24", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["outdoor", "theater"], "lat": 52.5336, "link": "https://www.kindaling.de/veranstaltungen/berlin", "lng": 13.4318, "ort": "Spielplatz Arnswalder Platz (Kurt-Tucholsky-Bibliothek)", "pankow": true, "preis": "kostenlos", "quelle": "kindaling.de", "titel": "Erzähltheater auf dem Arnswalder Platz", "zeit": "", "id": "2026-11-24-erzaehltheater-arnswalder"}, {"alter": "Eltern mit Babys", "beschreibung": "Kinovorstellung für Eltern, bei der Babys dabei sein dürfen: gedämpfter Ton, etwas Licht, Platz für Kinderwagen.", "bezirk": "Mitte", "datum": "2026-11-25", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor"], "lat": 52.526, "link": "https://www.kindaling.de/veranstaltungen/berlin", "lng": 13.4105, "ort": "Kino Babylon", "pankow": false, "preis": "ab 9 €", "quelle": "kindaling.de", "titel": "Kinderwagenkino im Babylon", "zeit": "11:00", "id": "2026-11-25-kinderwagenkino-babylon"}, {"alter": "Kita-Kinder", "beschreibung": "Orchesterkonzert mit Puppenspiel: Bär, Affe, Löwe und Tiger erleben ein Abenteuer. Kuscheltier mitbringen!", "bezirk": "Charlottenburg", "datum": "2026-11-25", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "musik", "theater"], "lat": 52.5115, "link": "https://www.berlin.de/tickets/kinder/das-kuscheltierkonzert/2026-11-25-n-a-3ad5ad2e-dee1-41bc-a561-2d26ace71170/", "lng": 13.321, "ort": "Komische Oper im Schillertheater", "pankow": false, "preis": "", "quelle": "berlin.de", "titel": "Das Kuscheltierkonzert", "zeit": "11:00", "id": "2026-11-25-kuscheltierkonzert"}, {"alter": "Kita-Kinder", "beschreibung": "Märchen zum Mitmachen: Die Kinder rufen Ideen rein und dürfen mit auf die Bühne. Weitere Termine bis Ende Januar.", "bezirk": "Mitte", "datum": "2026-11-27", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "theater"], "lat": 52.5245, "link": "https://www.berlin.de/en/tickets/kids/froschkoenig-mitspieltheater/2026-11-27-froschkoenig-mitspieltheater-32458457-dbc2-4d69-bc14-7ed84396a20a/", "lng": 13.396, "ort": "Galli Theater, Oranienburger Str. 32", "pankow": false, "preis": "ab 14,61 €", "quelle": "berlin.de", "titel": "Froschkönig – Mitspieltheater", "zeit": "17:00", "id": "2026-11-27-froschkoenig-galli"}, {"alter": "Familien", "beschreibung": "Kleiner Adventsmarkt mit Kunsthandwerk und Leckereien, an allen Adventssonntagen.", "bezirk": "Prenzlauer Berg", "datum": "2026-11-29", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["outdoor", "fest"], "lat": 52.5363, "link": "https://www.visitberlin.de/de/adventsoekomarkt-kollwitzplatz-berlin", "lng": 13.4175, "ort": "Kollwitzplatz", "pankow": true, "preis": "Eintritt frei", "quelle": "visitberlin.de", "titel": "Öko-Adventsmarkt am Kollwitzplatz", "zeit": "12:00–19:00", "id": "2026-11-29-adventsmarkt-kollwitzplatz"}, {"alter": "Familien", "beschreibung": "Zweiter Advent: Kunsthandwerk, Leckereien und Nikolausstimmung im Kiez.", "bezirk": "Prenzlauer Berg", "datum": "2026-12-06", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["outdoor", "fest"], "lat": 52.5363, "link": "https://www.visitberlin.de/de/adventsoekomarkt-kollwitzplatz-berlin", "lng": 13.4175, "ort": "Kollwitzplatz", "pankow": true, "preis": "Eintritt frei", "quelle": "visitberlin.de", "titel": "Öko-Adventsmarkt am Kollwitzplatz", "zeit": "12:00–19:00", "id": "2026-12-06-adventsmarkt-kollwitzplatz"}, {"alter": "3–11 Jahre", "beschreibung": "Kleines Figurentheater mit Zirkusgeschichte für Kita- und Grundschulkinder.", "bezirk": "Mitte", "datum": "2026-12-06", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "theater"], "link": "https://www.kindaling.de/kindertheater-shows/berlin?page=39", "ort": "Theater Coq au Vin", "pankow": false, "preis": "ab 12 €", "quelle": "kindaling.de", "titel": "Die geheimnisvolle Truhe und die Zirkusmaus", "zeit": "", "id": "2026-12-06-zirkusmaus-coq-au-vin"}, {"alter": "3–11 Jahre", "beschreibung": "Töpfe, Löffel und Kochlöffel werden zu Zirkusartisten.", "bezirk": "Mitte", "datum": "2026-12-13", "gefunden": "2026-11-14T08:25:00+01:00", "imRing": true, "kategorien": ["indoor", "theater"], "link": "https://www.kindaling.de/kindertheater-shows/berlin?page=39", "ort": "Theater Coq au Vin", "pankow": false, "preis": "ab 12 €", "quelle": "kindaling.de", "titel": "Der furiose Küchenzirkus", "zeit": "", "id": "2026-12-13-kuechenzirkus-coq-au-vin"}]}</script>
+<script>
+const KATS=[
+  ["indoor","Drinnen","--c-indoor","🏠"],["outdoor","Draußen","--c-outdoor","🌳"],["musik","Musik","--c-musik","🎵"],
+  ["kunst","Kunst & Basteln","--c-kunst","🎨"],["theater","Theater","--c-theater","🎭"],["natur","Natur & Tiere","--c-natur","🐞"],
+  ["bewegung","Bewegung","--c-bewegung","🤸"],["fest","Feste & Märkte","--c-fest","🎪"],["museum","Museum","--c-museum","🦕"],["workshop","Kurs","--c-workshop","✂️"]
+];
+const KATMAP=Object.fromEntries(KATS.map(k=>[k[0],k]));
+const ZEITEN=[["vier","Nächste 4 Wochen"],["heute","Heute"],["morgen","Morgen"],["we","Wochenende"],["woche","7 Tage"],["alle","Alles"],["neu","Neu ✨"],["merk","Gemerkt ★"]];
+const GEBIETE=[["alle","Überall"],["ring","Im S-Bahn-Ring"],["pankow","Bezirk Pankow"]];
+
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+const state={zeit:store.get("kk-zeit","vier"),kat:store.get("kk-kat","alle"),gebiet:store.get("kk-gebiet","alle"),
+  merk:new Set(store.get("kk-merk",[])),view:store.get("kk-view","liste"),sel:null,monat:null};
+let events=[],status=null,loaded=false;
+
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
+const today=()=>iso(new Date());
+const WT=["So","Mo","Di","Mi","Do","Fr","Sa"],MO=["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+const MOL=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n}
+
+function chip(label,pressed,onClick,color,icon){
+  const b=el("button","chip");b.type="button";b.setAttribute("aria-pressed",pressed?"true":"false");
+  if(color)b.style.setProperty("--c",`var(${color})`);
+  if(icon){b.append(el("span","ic",icon))}
+  b.append(label);b.addEventListener("click",onClick);return b;
+}
+function setF(k,v){state[k]=v;store.set("kk-"+k,v);render()}
+function renderFilters(){
+  const fz=document.getElementById("f-zeit"),fk=document.getElementById("f-kat"),fg=document.getElementById("f-gebiet");
+  fz.textContent="";fk.textContent="";fg.textContent="";
+  if(state.view!=="kal")ZEITEN.forEach(([id,l])=>fz.append(chip(l,state.zeit===id,()=>setF("zeit",id))));
+  fz.hidden=state.view==="kal";
+  fk.append(chip("Alles",state.kat==="alle",()=>setF("kat","alle"),null,"🌈"));
+  KATS.forEach(([id,l,c,ic])=>fk.append(chip(l,state.kat===id,()=>setF("kat",id),c,ic)));
+  GEBIETE.forEach(([id,l])=>fg.append(chip(l,state.gebiet===id,()=>setF("gebiet",id))));
+}
+
+function isNeu(e){
+  if(!e.gefunden)return false;
+  const g=new Date(e.gefunden).getTime();
+  const ref=status&&status.letzteSuche?new Date(status.letzteSuche).getTime():Date.now();
+  return g>=ref-6*3600e3;
+}
+const ende=e=>e.bis||e.datum;
+const overlaps=(e,a,b)=>e.datum<=b&&ende(e)>=a;
+function inZeit(e){
+  const t=today(),now=new Date();
+  if(ende(e)<t)return false;
+  switch(state.zeit){
+    case "heute":return overlaps(e,t,t);
+    case "morgen":{const m=iso(addDays(now,1));return overlaps(e,m,m)}
+    case "we":{const wd=now.getDay();const sa=wd===0?addDays(now,-1):addDays(now,6-wd);return overlaps(e,iso(sa),iso(addDays(sa,1)))}
+    case "woche":return overlaps(e,t,iso(addDays(now,6)));
+    case "vier":return overlaps(e,t,iso(addDays(now,27)));
+    case "neu":return isNeu(e);
+    case "merk":return state.merk.has(e.id);
+    default:return true;
+  }
+}
+function passt(e){return (state.kat==="alle"||(e.kategorien||[]).includes(state.kat))
+  &&(state.gebiet==="alle"||(state.gebiet==="ring"?e.imRing:e.pankow))}
+const byZeit=(a,b)=>(a.zeit||"~").localeCompare(b.zeit||"~");
+function dayLabel(d){
+  const t=today(),m=iso(addDays(new Date(),1));
+  const dt=new Date(d+"T12:00:00");
+  const s=`${WT[dt.getDay()]}, ${dt.getDate()}. ${MO[dt.getMonth()]}`;
+  return d===t?["Heute",s]:d===m?["Morgen",s]:[s,""];
+}
+function hauptKat(e){return KATMAP[(e.kategorien||[]).find(k=>k!=="indoor"&&k!=="outdoor"&&KATMAP[k])||(e.kategorien||[])[0]]||KATS[0]}
+
+function card(e){
+  const c=el("article","card");const hk=hauptKat(e);
+  const bub=el("div","bubble");bub.style.setProperty("--c",`var(${hk[2]})`);
+  bub.append(el("span","ic",hk[3]));
+  if(e.bis&&e.bis!==e.datum){const b=new Date(e.bis+"T12:00:00");bub.append(el("span","t",`bis ${b.getDate()}.${b.getMonth()+1}.`))}
+  else bub.append(el("span","t",e.zeit&&e.zeit.length<=11?e.zeit:"ganztags"));
+  const h=el("h3","title",e.titel||"Ohne Titel");
+  if(isNeu(e))h.append(el("span","neu","NEU"));
+  const st=el("button","star","★");st.type="button";
+  const on=state.merk.has(e.id);st.setAttribute("aria-pressed",on?"true":"false");st.setAttribute("aria-label",on?"Nicht mehr merken":"Merken");
+  st.addEventListener("click",()=>{state.merk.has(e.id)?state.merk.delete(e.id):state.merk.add(e.id);store.set("kk-merk",[...state.merk]);render()});
+  const zeitTxt=e.zeit&&e.zeit.length>11?e.zeit:"";
+  c.append(bub,h,st,el("div","where",[e.ort,e.bezirk,zeitTxt].filter(Boolean).join(" · ")));
+  if(e.beschreibung)c.append(el("p","desc",e.beschreibung));
+  const m=el("div","meta");
+  (e.kategorien||[]).forEach(k=>{const d=KATMAP[k];if(!d)return;const t=el("span","tag",d[3]+" "+d[1]);t.style.setProperty("--c",`var(${d[2]})`);m.append(t)});
+  if(e.alter)m.append(el("span","info","👶 "+e.alter));
+  if(e.preis)m.append(el("span","info","💶 "+e.preis));
+  const links=el("span","links");
+  const q=(typeof e.lat==="number"&&typeof e.lng==="number")?`${e.lat},${e.lng}`:[e.ort,e.bezirk,"Berlin"].filter(Boolean).join(", ");
+  if(e.bezirk!=="stadtweit"){const r=el("a","route","📍 Route");r.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);r.target="_blank";r.rel="noopener";links.append(r)}
+  if(e.link&&/^https?:\/\//.test(e.link)){const a=el("a",null,"Mehr ↗");a.href=e.link;a.target="_blank";a.rel="noopener";links.append(a)}
+  m.append(links);
+  c.append(m);return c;
+}
+function emptyBox(icon,title,text){const e=el("div","empty");e.append(el("span","big",icon),el("strong",null,title),document.createTextNode(text));return e}
+
+function renderStatus(){
+  const s=document.getElementById("status");s.textContent="";
+  if(!loaded){s.append(el("span","pill","Lade Termine …"));return}
+  const t=today(),bis=iso(addDays(new Date(),27));
+  s.append(el("span","pill",`${events.filter(e=>overlaps(e,t,bis)).length} Termine in 4 Wochen`));
+  const neu=events.filter(e=>isNeu(e)&&ende(e)>=t).length;
+  if(neu)s.append(el("span","pill neu",`✨ ${neu} neu`));
+  if(status&&status.letzteSuche){const d=new Date(status.letzteSuche);s.append(el("span",null,`Zuletzt gesucht: ${d.getDate()}. ${MO[d.getMonth()]}, ${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")} Uhr`))}
+}
+
+function renderListe(list){
+  const items=events.filter(e=>inZeit(e)&&passt(e));
+  if(!items.length){list.append(events.length?emptyBox("🔍","Nichts gefunden","Probier einen anderen Zeitraum oder eine andere Kategorie."):emptyBox("🎈","Noch keine Termine","Der Agent trägt hier jeden Morgen neue Angebote ein."));return}
+  const groups=new Map(),t=today();
+  items.forEach(e=>{const k=e.datum<t?t:e.datum;if(!groups.has(k))groups.set(k,[]);groups.get(k).push(e)});
+  [...groups.keys()].sort().forEach(d=>{
+    const sec=el("section","day");const [a,b]=dayLabel(d);
+    const h=el("h2",null,a);if(b)h.append(el("small",null,b));sec.append(h);
+    groups.get(d).sort(byZeit).forEach(e=>sec.append(card(e)));list.append(sec);
+  });
+}
+
+function renderKalender(box,list){
+  box.textContent="";
+  const now=new Date();
+  if(!state.monat)state.monat=[now.getFullYear(),now.getMonth()];
+  const [y,m]=state.monat;
+  const first=new Date(y,m,1),last=new Date(y,m+1,0);
+  const minM=[now.getFullYear(),now.getMonth()];
+  const cal=el("div","cal");
+  const head=el("div","cal-head");
+  const prev=el("button",null,"‹");prev.type="button";prev.setAttribute("aria-label","Vorheriger Monat");
+  prev.disabled=(y===minM[0]&&m===minM[1]);
+  prev.addEventListener("click",()=>{const d=new Date(y,m-1,1);state.monat=[d.getFullYear(),d.getMonth()];state.sel=null;render()});
+  const next=el("button",null,"›");next.type="button";next.setAttribute("aria-label","Nächster Monat");
+  next.addEventListener("click",()=>{const d=new Date(y,m+1,1);state.monat=[d.getFullYear(),d.getMonth()];state.sel=null;render()});
+  head.append(prev,el("h2",null,`${MOL[m]} ${y}`),next);cal.append(head);
+  const g=el("div","grid");
+  ["Mo","Di","Mi","Do","Fr","Sa","So"].forEach(w=>g.append(el("div","wd",w)));
+  const t=today();const pool=events.filter(passt);
+  const lead=(first.getDay()+6)%7;
+  for(let i=0;i<lead;i++)g.append(el("div","cell out"));
+  if(!state.sel){const f=iso(first);state.sel=(t>=f&&t<=iso(last))?t:f}
+  for(let d=1;d<=last.getDate();d++){
+    const ds=iso(new Date(y,m,d));const wd=new Date(y,m,d).getDay();
+    const einzel=pool.filter(e=>!e.bis&&e.datum===ds||e.bis&&e.datum===ds);
+    const lauf=pool.filter(e=>e.bis&&e.datum<ds&&e.bis>=ds);
+    const c=el("button","cell");c.type="button";
+    if(ds<t)c.classList.add("past");if(wd===0||wd===6)c.classList.add("we");
+    if(ds===t)c.classList.add("today");if(ds===state.sel)c.classList.add("sel");
+    c.append(el("span","n",String(d)));
+    if(einzel.length){const dots=el("span","dots");einzel.slice(0,4).forEach(e=>{const i=el("i");i.style.setProperty("--c",`var(${hauptKat(e)[2]})`);dots.append(i)});if(einzel.length>4)dots.append(el("b",null,"+"));c.append(dots)}
+    if(lauf.length)c.append(el("span","lauf"));
+    c.setAttribute("aria-label",`${d}. ${MOL[m]}: ${einzel.length} Termine${lauf.length?`, ${lauf.length} laufende Angebote`:""}`);
+    c.addEventListener("click",()=>{state.sel=ds;render()});
+    g.append(c);
+  }
+  cal.append(g);
+  const lg=el("div","legend");
+  const a=el("span");a.append(el("span","dot-l"),document.createTextNode("Termin an diesem Tag"));
+  const b=el("span");b.append(el("span","lauf-l"),document.createTextNode("Markt oder Festival läuft"));
+  lg.append(a,b);cal.append(lg);box.append(cal);
+
+  const ds=state.sel;const [la,lb]=dayLabel(ds);
+  const sec=el("section","day");const h=el("h2",null,la);if(lb)h.append(el("small",null,lb));sec.append(h);
+  const einzel=pool.filter(e=>e.datum===ds).sort(byZeit);
+  const lauf=pool.filter(e=>e.datum<ds&&ende(e)>=ds).sort(byZeit);
+  if(!einzel.length&&!lauf.length)sec.append(emptyBox("☁️","An diesem Tag nichts dabei","Tipp einen Tag mit bunten Punkten an."));
+  einzel.forEach(e=>sec.append(card(e)));
+  if(lauf.length){sec.append(el("p","sub-h","Läuft außerdem"));lauf.forEach(e=>sec.append(card(e)))}
+  list.append(sec);
+}
+
+/* Kiezkarte: vereinfachte Zeichnung aus echten Koordinaten (S-Bahn-Ring-Bahnhöfe, Bezirk Pankow grob) */
+const B={lat0:52.685,lng0:13.265,k:2000,c:0.609};
+const P=(lat,lng)=>[((lng-B.lng0)*B.c*B.k),((B.lat0-lat)*B.k)];
+const pts=a=>a.map(([la,ln])=>P(la,ln).map(v=>v.toFixed(1)).join(",")).join(" ");
+const RING=[[52.5487,13.3885],[52.5492,13.4147],[52.5446,13.4271],[52.5402,13.4389],[52.5292,13.4554],[52.5236,13.4646],[52.5136,13.4752],[52.5031,13.4693],[52.4935,13.4616],[52.4728,13.4555],[52.4693,13.4428],[52.4673,13.4316],[52.4709,13.3857],[52.4755,13.3655],[52.4797,13.3524],[52.4782,13.3428],[52.4776,13.3285],[52.4802,13.3116],[52.4888,13.2996],[52.4964,13.2905],[52.5009,13.2836],[52.5076,13.2834],[52.5185,13.2843],[52.5306,13.2997],[52.5344,13.3290],[52.5364,13.3436],[52.5428,13.3660]];
+const PANKOW=[[52.5300,13.4000],[52.5290,13.4300],[52.5390,13.4600],[52.5530,13.4800],[52.5700,13.5000],[52.6000,13.5150],[52.6350,13.5050],[52.6700,13.4800],[52.6650,13.4150],[52.6400,13.3700],[52.6050,13.3350],[52.5800,13.3600],[52.5600,13.3800],[52.5480,13.3900],[52.5380,13.3920]];
+const SPREE=[[52.5050,13.4700],[52.5120,13.4500],[52.5150,13.4250],[52.5180,13.4050],[52.5200,13.3900],[52.5205,13.3720],[52.5180,13.3580],[52.5230,13.3420],[52.5170,13.3250],[52.5250,13.3050],[52.5330,13.2850]];
+const SVGNS="http://www.w3.org/2000/svg";
+function sv(tag,attrs,text){const n=document.createElementNS(SVGNS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(text!=null)n.textContent=text;return n}
+function renderKarte(box,list){
+  box.textContent="";
+  const items=events.filter(e=>inZeit(e)&&passt(e));
+  const mitOrt=items.filter(e=>typeof e.lat==="number"&&typeof e.lng==="number");
+  const ohneOrt=items.length-mitOrt.length;
+  const wrap=el("div","map");
+  const s=sv("svg",{viewBox:"0 0 320 445",role:"img","aria-label":"Karte von Berlin mit S-Bahn-Ring und Bezirk Pankow"});
+  s.append(sv("polygon",{points:pts(PANKOW),class:"pankow"}),sv("polygon",{points:pts(RING),class:"ring"}),sv("polyline",{points:pts(SPREE),class:"spree"}));
+  [["PANKOW",52.615,13.425,"big"],["Weißensee",52.556,13.468,"lbl"],["Prenzl. Berg",52.5445,13.418,"lbl"],["Mitte",52.522,13.392,"lbl"],["Wedding",52.551,13.352,"lbl"],["Friedrichshain",52.5135,13.452,"lbl"],["Kreuzberg",52.4965,13.405,"lbl"],["Charlottenburg",52.504,13.300,"lbl"],["Neukölln",52.476,13.438,"lbl"],["S-Bahn-Ring",52.462,13.36,"lbl"]].forEach(([t,la,ln,c])=>{const [x,y]=P(la,ln);s.append(sv("text",{x:x.toFixed(1),y:y.toFixed(1),class:c,"text-anchor":"middle"},t))});
+  const groups=new Map();
+  mitOrt.forEach(e=>{const k=e.lat.toFixed(3)+","+e.lng.toFixed(3);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(e)});
+  if(state.ort&&!groups.has(state.ort))state.ort=null;
+  [...groups.entries()].forEach(([k,es])=>{
+    const [x,y]=P(es[0].lat,es[0].lng);const hk=hauptKat(es[0]);
+    const g=sv("g",{class:"pin"+(state.ort===k?" sel":""),tabindex:"0",role:"button","aria-label":`${es[0].ort}: ${es.length} Termin${es.length>1?"e":""}`});
+    g.append(sv("circle",{cx:x.toFixed(1),cy:y.toFixed(1),r:es.length>1?12:10,class:"p",fill:`var(${hk[2]})`}),sv("text",{x:x.toFixed(1),y:(y+0.5).toFixed(1)},es.length>1?String(es.length):hk[3]));
+    const pick=()=>{state.ort=state.ort===k?null:k;render()};
+    g.addEventListener("click",pick);g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();pick()}});
+    s.append(g);
+  });
+  wrap.append(s);
+  wrap.append(el("p","map-hint",`Vereinfachte Karte · ${mitOrt.length} Termine mit Ort${ohneOrt?` · ${ohneOrt} ohne festen Ort (z. B. stadtweit)`:""} · Tipp auf einen Punkt`));
+  box.append(wrap);
+  if(state.ort){
+    const es=groups.get(state.ort);const sec=el("section","day");
+    sec.append(el("h2",null,es[0].ort||"Ort"));es.sort((a,b)=>a.datum.localeCompare(b.datum)).forEach(e=>sec.append(card(e)));list.append(sec);
+  } else if(!items.length){list.append(emptyBox("🔍","Nichts gefunden","Probier einen anderen Zeitraum oder eine andere Kategorie."))}
+}
+
+function render(){
+  document.getElementById("v-liste").setAttribute("aria-pressed",state.view==="liste"?"true":"false");
+  document.getElementById("v-kal").setAttribute("aria-pressed",state.view==="kal"?"true":"false");
+  document.getElementById("v-karte").setAttribute("aria-pressed",state.view==="karte"?"true":"false");
+  renderFilters();renderStatus();
+  const list=document.getElementById("list"),cal=document.getElementById("cal");
+  list.textContent="";cal.hidden=state.view==="liste";
+  if(!loaded)return;
+  if(state.view==="kal")renderKalender(cal,list);else if(state.view==="karte")renderKarte(cal,list);else renderListe(list);
+}
+document.getElementById("v-karte").addEventListener("click",()=>{state.view="karte";store.set("kk-view","karte");render()});
+document.getElementById("v-liste").addEventListener("click",()=>{state.view="liste";store.set("kk-view","liste");render()});
+document.getElementById("v-kal").addEventListener("click",()=>{state.view="kal";store.set("kk-view","kal");render()});
+
+function showError(msg){loaded=true;render();const l=document.getElementById("list");l.textContent="";document.getElementById("cal").hidden=true;l.append(emptyBox("🙈","Termine nicht erreichbar",msg))}
+
+render();
+/* Daten laden: zuerst events.json neben dieser Datei (z. B. auf deinem Server),
+   sonst die eingebetteten Daten unten. Format: {"status":{...},"events":[{...}]} */
+function setzeDaten(d){
+  status=d.status||null;
+  events=(d.events||[]).map((e,i)=>({id:e.id||("e"+i),...e})).filter(e=>e.datum);
+  loaded=true;render();
+}
+(async()=>{
+  const eingebettet=JSON.parse(document.getElementById("daten").textContent);
+  try{
+    const r=await fetch("events.json",{cache:"no-store"});
+    if(r.ok){setzeDaten(await r.json());return}
+  }catch(_){}
+  setzeDaten(eingebettet);
+})();
+</script>
+<script>if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
+
+</body>
+</html>
