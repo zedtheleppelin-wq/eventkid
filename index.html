@@ -427,13 +427,14 @@ function setzeDaten(d){
 (async()=>{
   const eingebettet=JSON.parse(document.getElementById("daten").textContent);
   try{
-    const r=await fetch("events.json",{cache:"no-store"});
-    if(r.ok){setzeDaten(await r.json());return}
+    const BASIS=location.hostname==="localhost"?"https://zedtheleppelin-wq.github.io/eventkid/":"";
+    const r=await fetch(BASIS+"events.json",{cache:"no-store"});
+    if(r.ok){const d=await r.json();store.set("kk-daten",d);setzeDaten(d);return}
   }catch(_){}
-  setzeDaten(eingebettet);
+  setzeDaten(store.get("kk-daten",null)||eingebettet);
 })();
 </script>
-<script>if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
+<script>if('serviceWorker' in navigator&&location.protocol.startsWith('http')&&location.hostname!=="localhost")navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
 
 </body>
 </html>
