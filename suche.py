@@ -11,7 +11,7 @@ Ablauf
      Termin im S-Bahn-Ring oder in Pankow liegt.
   4. Das Ergebnis wird mit der bisherigen events.json zusammengeführt (damit „NEU“ stimmt).
 """
-import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
+import difflib, json, math, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from zoneinfo import ZoneInfo
@@ -32,8 +32,16 @@ RING = [[52.5487,13.3885],[52.5492,13.4147],[52.5446,13.4271],[52.5402,13.4389],
 PANKOW = [[52.5300,13.4000],[52.5290,13.4300],[52.5390,13.4600],[52.5530,13.4800],[52.5700,13.5000],[52.6000,13.5150],[52.6350,13.5050],[52.6700,13.4800],[52.6650,13.4150],[52.6400,13.3700],[52.6050,13.3350],[52.5800,13.3600],[52.5600,13.3800],[52.5480,13.3900],[52.5380,13.3920]]
 PANKOW_ORTSTEILE = {"pankow", "prenzlauer berg", "weißensee", "weissensee", "niederschönhausen", "heinersdorf", "buch",
                     "französisch buchholz", "blankenburg", "karow", "rosenthal", "wilhelmsruh", "blankenfelde", "malchow", "wartenberg"}
-RING_BEZIRKE = {"mitte", "tiergarten", "wedding", "moabit", "gesundbrunnen", "prenzlauer berg", "friedrichshain", "kreuzberg",
-                "charlottenburg", "wilmersdorf", "schöneberg", "neukölln", "tempelhof", "westend", "schillerkiez"}
+# Ortsteile, die sicher im Ring liegen (nur als Notlösung, wenn keine Koordinaten da sind)
+RING_SICHER = {"mitte", "tiergarten", "wedding", "moabit", "gesundbrunnen", "prenzlauer berg", "friedrichshain", "kreuzberg", "charlottenburg"}
+# ungefähre Mittelpunkte zur Plausibilitätsprüfung der Koordinaten (Ortsteil -> lat, lng)
+ZENTREN = {"prenzlauer berg": (52.540, 13.425), "pankow": (52.570, 13.403), "weißensee": (52.553, 13.460), "weissensee": (52.553, 13.460),
+           "mitte": (52.522, 13.390), "tiergarten": (52.514, 13.350), "wedding": (52.550, 13.350), "moabit": (52.530, 13.340),
+           "friedrichshain": (52.515, 13.455), "kreuzberg": (52.495, 13.405), "charlottenburg": (52.515, 13.300),
+           "neukölln": (52.480, 13.440), "schöneberg": (52.480, 13.350), "tempelhof": (52.470, 13.390), "wilmersdorf": (52.490, 13.315),
+           "treptow-köpenick": (52.450, 13.570), "malchow": (52.580, 13.490), "niederschönhausen": (52.600, 13.400)}
+RING_PUFFER_KM = 1.2
+
 
 
 def log(*a):
@@ -50,6 +58,35 @@ def im_polygon(lat, lng, poly):
             inside = not inside
         j = i
     return inside
+
+
+def km(lat1, lng1, lat2, lng2):
+    dy = (lat2 - lat1) * 110.57
+    dx = (lng2 - lng1) * 111.32 * math.cos(math.radians((lat1 + lat2) / 2))
+    return math.hypot(dx, dy)
+
+
+def abstand_polygon(lat, lng, poly):
+    """Kürzester Abstand (km) von einem Punkt zum Rand des Polygons."""
+    best = 1e9
+    for i in range(len(poly)):
+        (a1, o1), (a2, o2) = poly[i], poly[(i + 1) % len(poly)]
+        ky, kx = 110.57, 111.32 * math.cos(math.radians(lat))
+        px, py = (lng - o1) * kx, (lat - a1) * ky
+        sx, sy = (o2 - o1) * kx, (a2 - a1) * ky
+        l2 = sx * sx + sy * sy
+        t = 0 if l2 == 0 else max(0, min(1, (px * sx + py * sy) / l2))
+        best = min(best, math.hypot(px - t * sx, py - t * sy))
+    return best
+
+
+def nah(lat, lng, poly, puffer):
+    return im_polygon(lat, lng, poly) or abstand_polygon(lat, lng, poly) <= puffer
+
+
+def plausibel(pos, bezirk):
+    z = ZENTREN.get((bezirk or "").lower())
+    return z is None or km(pos[0], pos[1], z[0], z[1]) <= 6.5
 
 
 # ---------------------------------------------------------------- Gemini
@@ -129,7 +166,9 @@ EVENT_SCHEMA = {
             "ort": {"type": "STRING", "description": "Name des Ortes, wenn möglich mit Straße"},
             "bezirk": {"type": "STRING", "description": "Berliner Ortsteil, z. B. Prenzlauer Berg; 'stadtweit' wenn an vielen Orten"},
             "kategorien": {"type": "ARRAY", "items": {"type": "STRING", "enum": KATEGORIEN}},
-            "alter": {"type": "STRING"},
+            "alter": {"type": "STRING", "description": "Altersangabe wie im Material, z. B. ab 3 Jahren"},
+            "alterVon": {"type": "INTEGER", "description": "jüngstes geeignetes Alter in Jahren (0 für Babys), leer wenn unbekannt"},
+            "alterBis": {"type": "INTEGER", "description": "ältestes geeignetes Alter in Jahren, leer wenn offen oder unbekannt"},
             "preis": {"type": "STRING"},
             "beschreibung": {"type": "STRING", "description": "ein bis zwei Sätze"},
             "link": {"type": "STRING", "description": "genau eine URL aus der Quelle, sonst leer"},
@@ -144,13 +183,15 @@ def extrahiere(text, quelle_name, heute, ende):
 Heute ist {heute.isoformat()}. Gesucht sind Termine vom {heute.isoformat()} bis {ende.isoformat()}.
 
 Ziehe aus dem folgenden Material alle passenden Termine heraus. Regeln:
-- Nur Angebote, die für Kinder von 0–6 Jahren (auch mit Eltern) geeignet sind: Theater, Konzerte, Lesungen, Basteln, Spielgruppen, Feste, Weihnachtsmärkte mit Kinderprogramm, Museen, Kurse, Kino für Babys usw.
+- Nur Angebote, die Kinder von 0–6 Jahren (auch mit Eltern) wirklich nutzen können: Theater, Konzerte, Lesungen, Basteln, Spielgruppen, Feste, Weihnachtsmärkte mit Kinderprogramm, Museen, Kurse, Kino für Babys usw.
+- Weglassen: Angebote ab 7 Jahren, Fachveranstaltungen, Flohmärkte und Feste ohne erkennbaren Kinderbezug, Veranstaltungen für Erwachsene.
+- alterVon/alterBis als Zahlen füllen, wenn das Material ein Alter nennt. Steht dort "für alle" oder "Familien", beides leer lassen.
 - Nur Berlin. Nichts erfinden: Wenn Datum oder Ort nicht im Material stehen, den Termin weglassen.
 - Datum immer als YYYY-MM-DD. Jahreszahl ergänzen, falls sie fehlt (Termine liegen im Zeitraum oben).
 - Mehrtägige Märkte/Festivals: ein Eintrag, datum = erster Tag (oder heute, falls schon laufend), bis = letzter Tag.
 - Regelmäßige Termine (z. B. wöchentlich): je ein Eintrag pro Datum im Zeitraum, höchstens 5.
 - kategorien: 1–3 passende Werte (indoor/outdoor plus Themenkategorie).
-- link: nur eine URL, die wörtlich im Material vorkommt, sonst leer lassen.
+- link: bevorzugt die Seite genau dieses Termins; nur eine URL, die wörtlich im Material vorkommt, sonst leer lassen.
 - Texte auf Deutsch, beschreibung kurz und sachlich. Unbekannte Felder leer lassen.
 
 Quelle: {quelle_name}
@@ -169,7 +210,7 @@ Material:
 class TextSammler(HTMLParser):
     def __init__(self, basis):
         super().__init__(convert_charrefs=True)
-        self.basis, self.teile, self.links, self.skip, self.href = basis, [], set(), 0, None
+        self.basis, self.teile, self.anker, self.skip, self.href, self.atext = basis, [], {}, 0, None, []
 
     def handle_starttag(self, tag, attrs):
         if tag in ("script", "style", "noscript", "svg", "head"):
@@ -178,7 +219,8 @@ class TextSammler(HTMLParser):
             h = dict(attrs).get("href")
             if h and not h.startswith(("#", "mailto:", "javascript:")):
                 self.href = urllib.parse.urljoin(self.basis, h)
-                self.links.add(self.href)
+                self.atext = []
+                self.anker.setdefault(self.href, "")
                 self.teile.append("[")
         elif tag in ("p", "div", "li", "br", "h1", "h2", "h3", "h4", "article", "section", "tr"):
             self.teile.append("\n")
@@ -188,11 +230,16 @@ class TextSammler(HTMLParser):
             self.skip = max(0, self.skip - 1)
         elif tag == "a" and self.href:
             self.teile.append(f"]({self.href})")
+            t = " ".join(self.atext).strip()
+            if len(t) > len(self.anker.get(self.href, "")):
+                self.anker[self.href] = t
             self.href = None
 
     def handle_data(self, d):
         if not self.skip and d.strip():
             self.teile.append(d.strip() + " ")
+            if self.href:
+                self.atext.append(d.strip())
 
 
 def lade_seite(url):
@@ -202,7 +249,7 @@ def lade_seite(url):
     p = TextSammler(url)
     p.feed(html)
     text = re.sub(r"\n\s*\n+", "\n", "".join(p.teile))
-    return text[:60000], p.links
+    return text[:60000], p.anker
 
 
 def quellenliste():
@@ -253,23 +300,91 @@ def gebiet(e):
         e["imRing"], e["pankow"] = True, True
         return True
     if "lat" in e:
-        e["imRing"] = im_polygon(e["lat"], e["lng"], RING) or bez in RING_BEZIRKE
-        e["pankow"] = im_polygon(e["lat"], e["lng"], PANKOW) or bez in PANKOW_ORTSTEILE
-    else:
-        e["imRing"] = bez in RING_BEZIRKE
+        e["imRing"] = nah(e["lat"], e["lng"], RING, RING_PUFFER_KM)
+        e["pankow"] = nah(e["lat"], e["lng"], PANKOW, 0.5) or bez in PANKOW_ORTSTEILE
+    else:                                # ohne Koordinaten nur sichere Ortsteile
+        e["imRing"] = bez in RING_SICHER
         e["pankow"] = bez in PANKOW_ORTSTEILE
     return e["imRing"] or e["pankow"]
 
 
 # ---------------------------------------------------------------- Aufräumen & Zusammenführen
-def slug(s):
+def slug(s, n=40):
     s = unicodedata.normalize("NFKD", s.lower().replace("ß", "ss").replace("ä", "ae").replace("ö", "oe").replace("ü", "ue"))
-    return re.sub(r"[^a-z0-9]+", "-", s.encode("ascii", "ignore").decode()).strip("-")[:40]
+    return re.sub(r"[^a-z0-9]+", "-", s.encode("ascii", "ignore").decode()).strip("-")[:n]
 
 
-def schluessel(e):
-    # Märkte/Festivals (mit "bis") zählen als ein Eintrag, egal an welchem Tag sie gefunden werden
-    return slug(e["titel"])[:25] + ("" if e.get("bis") else "|" + e["datum"])
+def zahl(x):
+    return x if isinstance(x, int) and not isinstance(x, bool) else None
+
+
+def alter_normieren(e):
+    """Vereinheitlicht e['alter'] und setzt alterVon/alterBis (Zahlen, wenn erkennbar)."""
+    t = (e.get("alter") or "").lower().replace("–", "-")
+    von, bis = zahl(e.get("alterVon")), zahl(e.get("alterBis"))
+    if von is None and bis is None:
+        m = re.search(r"(\d+)\s*-\s*(\d+)", t)
+        if m:
+            von, bis = int(m.group(1)), int(m.group(2))
+        elif re.search(r"ab\s*(\d+)", t):
+            von = int(re.search(r"ab\s*(\d+)", t).group(1))
+        elif "baby" in t or "babys" in t:
+            von, bis = 0, 1
+        elif "kleinkind" in t:
+            von, bis = 1, 3
+        elif "kita" in t:
+            von, bis = 3, 6
+    if bis is not None and bis >= 18 and (von or 0) <= 1:     # "0-99": gilt für alle
+        e["alter"], von, bis = "Familien", None, None
+    elif von is not None and bis is not None:
+        e["alter"] = f"{von}–{bis} Jahre"
+    elif von is not None:
+        e["alter"] = f"ab {von} Jahren"
+    elif re.fullmatch(r"[\d\s\-jJahre]*", e.get("alter") or ""):
+        e["alter"] = ""
+    for k, v in (("alterVon", von), ("alterBis", bis)):
+        if v is None:
+            e.pop(k, None)
+        else:
+            e[k] = v
+    return von is None or von <= 6
+
+
+def tokens(titel):
+    return {w for w in slug(titel, 80).split("-") if len(w) >= 4}
+
+
+def aehnlich(a, b):
+    gleich_tag = a["datum"] == b["datum"]
+    if not gleich_tag and not (a.get("bis") or b.get("bis")):
+        return False
+    sa, sb = slug(a["titel"], 80), slug(b["titel"], 80)
+    if min(len(sa), len(sb)) >= 8 and (sa in sb or sb in sa):
+        return True
+    if difflib.SequenceMatcher(None, sa, sb).ratio() >= (0.72 if gleich_tag else 0.85):
+        return True
+    if gleich_tag and (not a.get("zeit") or not b.get("zeit") or a["zeit"] == b["zeit"]):
+        ta, tb = tokens(a["titel"]), tokens(b["titel"])
+        gem = len(ta & tb)
+        return gem >= 2 and gem / max(1, min(len(ta), len(tb))) >= 0.6
+    return False
+
+
+def reicher(e):
+    return (sum(1 for k in ("preis", "zeit", "alter", "beschreibung") if e.get(k)) + (2 if "lat" in e else 0)
+            + (1 if (e.get("link") or "").count("/") >= 5 else 0))
+
+
+def beste_verlinkung(titel, anker):
+    """Sucht auf der Quellenseite den Link, dessen Text am besten zum Titel passt."""
+    st, best, bl = slug(titel, 80), 0.0, ""
+    for href, text in anker.items():
+        if not text:
+            continue
+        r = difflib.SequenceMatcher(None, st, slug(text, 80)).ratio()
+        if r > best:
+            best, bl = r, href
+    return bl if best >= 0.6 else ""
 
 
 def gueltiges_datum(s):
@@ -279,7 +394,7 @@ def gueltiges_datum(s):
         return None
 
 
-def bereinige(roh, quelle_name, erlaubte_links, fallback_link, heute, ende, jetzt):
+def bereinige(roh, quelle_name, anker, fallback_link, heute, ende, jetzt):
     out = []
     for r in roh:
         if not isinstance(r, dict):
@@ -301,6 +416,8 @@ def bereinige(roh, quelle_name, erlaubte_links, fallback_link, heute, ende, jetz
             "bezirk": (r.get("bezirk") or "").strip() or "Berlin",
             "kategorien": [k for k in (r.get("kategorien") or []) if k in KATEGORIEN][:3] or ["indoor"],
             "alter": (r.get("alter") or "").strip(),
+            "alterVon": r.get("alterVon"),
+            "alterBis": r.get("alterBis"),
             "preis": (r.get("preis") or "").strip(),
             "beschreibung": (r.get("beschreibung") or "").strip(),
             "quelle": quelle_name,
@@ -308,8 +425,10 @@ def bereinige(roh, quelle_name, erlaubte_links, fallback_link, heute, ende, jetz
         }
         if b:
             e["bis"] = b.isoformat()
+        if not alter_normieren(e):          # ab 7 Jahren: nicht für diese App
+            continue
         link = (r.get("link") or "").strip()
-        e["link"] = link if link in erlaubte_links else fallback_link
+        e["link"] = link if link in anker else (beste_verlinkung(titel, anker) or fallback_link)
         out.append(e)
     return out
 
@@ -327,7 +446,7 @@ def main():
         name = urllib.parse.urlparse(url).netloc.replace("www.", "")
         log(f"Quelle: {url}")
         try:
-            text, links = lade_seite(url)
+            text, anker = lade_seite(url)
         except Exception as e:
             log(f"  nicht ladbar: {e}")
             continue
@@ -339,7 +458,7 @@ def main():
         except KiFehler as e:
             log(f"  KI-Fehler: {e}")
             continue
-        neu = bereinige(roh, name, links | {url}, url, heute, ende, jetzt)
+        neu = bereinige(roh, name, anker, url, heute, ende, jetzt)
         log(f"  {len(neu)} Termine")
         gefunden += neu
 
@@ -364,48 +483,64 @@ def main():
             except KiFehler as e:
                 log(f"  KI-Fehler: {e}")
                 continue
-            neu = bereinige(roh, "Google-Suche", {u for _, u in quellen}, "", heute, ende, jetzt)
+            neu = bereinige(roh, "Google-Suche", {u: t for t, u in quellen}, "", heute, ende, jetzt)
             log(f"  {len(neu)} Termine")
             gefunden += neu
 
-    # Koordinaten & Gebiet
-    fertig = {}
+    # Koordinaten & Gebiet für neue Termine
+    neu_liste, verworfen = [], 0
     for e in gefunden:
-        k = schluessel(e)
-        if k in fertig:                  # doppelt gefunden: den mit mehr Angaben behalten
-            if len(json.dumps(e)) <= len(json.dumps(fertig[k])):
-                continue
         pos = geocode(e["ort"], e["bezirk"])
+        if pos and not plausibel(pos, e["bezirk"]):
+            log(f"  Koordinaten passen nicht zu {e['bezirk']}: {e['ort']} – ignoriert")
+            pos = None
         if pos:
             e["lat"], e["lng"] = pos
         if gebiet(e):
-            fertig[k] = e
-    log(f"{len(fertig)} Termine im Ring/Pankow")
+            neu_liste.append(e)
+        else:
+            verworfen += 1
+    log(f"{len(neu_liste)} neue Termine im Ring/Pankow ({verworfen} außerhalb verworfen)")
+    if not neu_liste:
+        sys.exit("Keine Termine gefunden – events.json bleibt unverändert.")
 
-    # Mit bisherigen Terminen zusammenführen
+    # Bisherige Termine prüfen (mit den heutigen, strengeren Regeln)
     pfad = os.path.join(HIER, "events.json")
     alt = []
     if os.path.exists(pfad):
         with open(pfad, encoding="utf-8") as f:
             alt = json.load(f).get("events", [])
-    if not fertig:
-        sys.exit("Keine Termine gefunden – events.json bleibt unverändert.")
-    alt_nach_key = {schluessel(e): e for e in alt if e.get("titel") and e.get("datum")}
-    ergebnis = {}
-    for k, e in fertig.items():
-        if k in alt_nach_key:
-            o = alt_nach_key[k]
-            e["gefunden"] = o.get("gefunden", e["gefunden"])
-            if e.get("bis") and o.get("bis"):
-                e["datum"], e["id"] = o["datum"], o.get("id", e.get("id"))
-        ergebnis[k] = e
-    for k, e in alt_nach_key.items():     # noch nicht abgelaufene alte Termine behalten
-        if k not in ergebnis and (e.get("bis") or e["datum"]) >= heute.isoformat():
-            ergebnis[k] = e
-    events = sorted(ergebnis.values(), key=lambda e: (e["datum"], e.get("zeit") or "~", e["titel"]))
+    alt_ok = []
+    for e in alt:
+        if not (e.get("titel") and e.get("datum")) or (e.get("bis") or e["datum"]) < heute.isoformat():
+            continue
+        if "lat" in e and not plausibel((e["lat"], e["lng"]), e.get("bezirk")):
+            e.pop("lat"); e.pop("lng", None)
+        if alter_normieren(e) and gebiet(e):
+            alt_ok.append(e)
+
+    # Zusammenführen, ähnliche Termine zu einem machen (der vollständigere gewinnt)
+    ergebnis = []
+    for e in alt_ok + neu_liste:
+        for i, o in enumerate(ergebnis):
+            if aehnlich(o, e):
+                aelter = o if o.get("gefunden", "") <= e.get("gefunden", "") else e
+                sieger, rest = (e, o) if reicher(e) > reicher(o) else (o, e)
+                for k, v in rest.items():
+                    if k not in ("gefunden", "id", "imRing", "pankow") and not sieger.get(k):
+                        sieger[k] = v
+                sieger["gefunden"] = aelter.get("gefunden", sieger.get("gefunden"))
+                if aelter.get("id"):
+                    sieger["id"] = aelter["id"]
+                gebiet(sieger)
+                ergebnis[i] = sieger
+                break
+        else:
+            ergebnis.append(e)
+    events = sorted(ergebnis, key=lambda e: (e["datum"], e.get("zeit") or "~", e["titel"]))
     for e in events:
         e["id"] = e.get("id") or f"{e['datum']}-{slug(e['titel'])}"
-        for leer in ("bis", "lat", "lng", "link"):
+        for leer in ("bis", "lat", "lng", "link", "alterVon", "alterBis"):
             if e.get(leer) in ("", None):
                 e.pop(leer, None)
 
