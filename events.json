@@ -1,9 +1,73 @@
 {
   "status": {
-    "letzteSuche": "2026-11-14T08:25:00+01:00",
+    "letzteSuche": "2026-11-14T10:48:41+01:00",
     "horizontTage": 28
   },
   "events": [
+    {
+      "alter": "ab 3 Jahren",
+      "beschreibung": "Festival mit hunderten Märchenlesungen, Erzähltheatern und Mitmachaktionen, auch in Bibliotheken im Kiez.",
+      "bezirk": "stadtweit",
+      "bis": "2026-11-22",
+      "datum": "2026-11-05",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "theater",
+        "indoor"
+      ],
+      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/",
+      "ort": "viele Orte in ganz Berlin",
+      "pankow": true,
+      "preis": "oft kostenlos",
+      "quelle": "berlin.de",
+      "titel": "Berliner Märchentage",
+      "zeit": "",
+      "id": "2026-11-22-maerchentage"
+    },
+    {
+      "titel": "KUKI Junges Kurzfilmfestival Berlin",
+      "datum": "2026-11-08",
+      "zeit": "",
+      "ort": "Berlin Prenzlauer Berg",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "4-19",
+      "preis": "ab 4 €",
+      "beschreibung": "Ein Kurzfilmfestival mit Angeboten für Kinder und Familien.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "bis": "2026-11-15",
+      "link": "https://www.kindaling.de/feste/kuki-junges-kurzfilmfestival-berlin/berlin-prenzlauer-berg",
+      "lat": 52.5492,
+      "lng": 13.4156,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-14-kuki-kurzfilmfestival"
+    },
+    {
+      "titel": "Familientag Bezirkszentralbibliothek Pablo Neruda",
+      "datum": "2026-11-14",
+      "zeit": "10:00",
+      "ort": "Stadtbibliothek Friedrichshain-Kreuzberg, Berlin Friedrichshain",
+      "bezirk": "Friedrichshain",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "2-12",
+      "preis": "",
+      "beschreibung": "Ein Familientag mit verschiedenen kreativen und spielerischen Angeboten.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-14-familientag-bezirkszentralbibliothek-pab"
+    },
     {
       "alter": "2–12 Jahre",
       "beschreibung": "Ein Vormittag mit Mitmachaktionen, Vorlesen und Basteln für die ganze Familie.",
@@ -25,6 +89,90 @@
       "titel": "Familientag in der Pablo-Neruda-Bibliothek",
       "zeit": "10:00",
       "id": "2026-11-14-familientag-pablo-neruda"
+    },
+    {
+      "titel": "Medienbasar",
+      "datum": "2026-11-14",
+      "zeit": "10:00",
+      "ort": "Zentral- und Landesbibliothek Berlin (ZLB), Berlin Kreuzberg",
+      "bezirk": "Kreuzberg",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "2-21",
+      "preis": "",
+      "beschreibung": "Flohmarkt für Medien in der Bibliothek.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-14-medienbasar"
+    },
+    {
+      "titel": "Miteinandermöbel [bauen]",
+      "datum": "2026-11-14",
+      "zeit": "10:00",
+      "ort": "Stadtbibliothek Pankow, Berlin Prenzlauer Berg",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "kunst"
+      ],
+      "alter": "0-99",
+      "preis": "",
+      "beschreibung": "Kreatives Bauprojekt für Familien.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-14-miteinandermoebel-bauen"
+    },
+    {
+      "titel": "Tag der offenen Tür in der Wolfdietrich-Schnurre-Bibliothek",
+      "datum": "2026-11-14",
+      "zeit": "10:00",
+      "ort": "Stadtbibliothek Pankow, Berlin Weißensee",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "0-99",
+      "preis": "",
+      "beschreibung": "Tag der offenen Tür mit Angeboten für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-14-tag-der-offenen-tuer-in-der-wolfdietrich"
+    },
+    {
+      "titel": "Der Grüne Georg - Show zum Umweltschutz für Kinder",
+      "datum": "2026-11-14",
+      "zeit": "11:00",
+      "ort": "Wolfdietrich-Schnurre-Bibliothek, Berlin Weißensee",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "0-99",
+      "preis": "",
+      "beschreibung": "Eine Show über Umweltschutz für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lat": 52.5477,
+      "lng": 13.4528,
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-14-der-gruene-georg-show-zum-umweltschutz-f"
     },
     {
       "alter": "Kleinkinder",
@@ -50,50 +198,114 @@
       "id": "2026-11-14-gruener-georg-weissensee"
     },
     {
-      "alter": "ab 4 Jahren",
-      "beschreibung": "Internationale Kurzfilme für Kinder, mit eigenen Programmen für die Jüngsten. Letzter Festivaltag am Sonntag.",
-      "bezirk": "Prenzlauer Berg",
-      "bis": "2026-11-15",
-      "datum": "2026-11-08",
-      "gefunden": "2026-11-14T08:25:00+01:00",
-      "imRing": true,
+      "titel": "Göttlich! – Ausstellungsgespräch für Familien im Alten Museum",
+      "datum": "2026-11-14",
+      "zeit": "11:00",
+      "ort": "Altes Museum, Berlin Mitte",
+      "bezirk": "Mitte",
       "kategorien": [
         "indoor",
-        "kunst"
+        "museum"
       ],
-      "lat": 52.5392,
-      "link": "https://www.kindaling.de/feste/kuki-junges-kurzfilmfestival-berlin/berlin-prenzlauer-berg",
-      "lng": 13.4128,
-      "ort": "KUKI Festival",
-      "pankow": true,
-      "preis": "ab 4 €",
+      "alter": "0-99",
+      "preis": "",
+      "beschreibung": "Ein Ausstellungsgespräch speziell für Familien.",
       "quelle": "kindaling.de",
-      "titel": "KUKI – Junges Kurzfilmfestival",
-      "zeit": "",
-      "id": "2026-11-14-kuki-kurzfilmfestival"
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lat": 52.5195,
+      "lng": 13.3988,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-14-goettlich-ausstellungsgespraech-fuer-fam"
     },
     {
-      "alter": "Kinder & Familien",
-      "beschreibung": "Tanzen mit Kindermusik im großen Haus am Spreeufer.",
-      "bezirk": "Tiergarten",
-      "datum": "2026-11-15",
-      "gefunden": "2026-11-14T08:25:00+01:00",
-      "imRing": true,
+      "titel": "Familientag Mittelpunktbibliothek",
+      "datum": "2026-11-14",
+      "zeit": "11:30",
+      "ort": "Stadtbibliothek Friedrichshain-Kreuzberg",
+      "bezirk": "Kreuzberg",
       "kategorien": [
         "indoor",
-        "musik",
-        "bewegung"
+        "fest",
+        "kunst"
       ],
-      "lat": 52.5186,
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lng": 13.365,
-      "ort": "Haus der Kulturen der Welt",
-      "pankow": false,
+      "alter": "3-12 J",
       "preis": "",
+      "beschreibung": "Ein abwechslungsreicher Familientag mit kreativen Angeboten.",
       "quelle": "kindaling.de",
-      "titel": "Kinderdisco im Haus der Kulturen der Welt",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/berlin",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-14-familientag-mittelpunktbibliothek"
+    },
+    {
+      "titel": "KLING KLANG",
+      "datum": "2026-11-14",
+      "zeit": "15:00",
+      "ort": "ATZE Musiktheater",
+      "bezirk": "Wedding",
+      "kategorien": [
+        "indoor",
+        "theater",
+        "musik"
+      ],
+      "alter": "ab 3 J",
+      "preis": "",
+      "beschreibung": "Eine musikalische Theateraufführung für Kinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/berlin",
+      "lat": 52.5433,
+      "lng": 13.3516,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-14-kling-klang"
+    },
+    {
+      "titel": "Fritz und Fridolin und die Jahreszeiten",
+      "datum": "2026-11-14",
+      "zeit": "16:00",
+      "ort": "Zimmer 16",
+      "bezirk": "Pankow",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 J",
+      "preis": "",
+      "beschreibung": "Ein Theaterstück über die Jahreszeiten für Kinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/berlin",
+      "lat": 52.5655,
+      "lng": 13.4014,
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-14-fritz-und-fridolin-und-die-jahreszeiten"
+    },
+    {
+      "titel": "Martinsbasar in Malchow",
+      "datum": "2026-11-14",
       "zeit": "",
-      "id": "2026-11-15-kinderdisco-hkw"
+      "ort": "Naturhof Malchow",
+      "bezirk": "Malchow",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Der Naturhof Malchow veranstaltet zum Martinstag einen Basar für die ganze Familie mit Laternenlauf und Mitmachangeboten.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/martinstag/10740719-5918668-martinsbasar-in-malchow.html",
+      "lat": 52.5791,
+      "lng": 13.4813,
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-14-martinsbasar-in-malchow"
     },
     {
       "alter": "ab 4 Jahren",
@@ -117,6 +329,49 @@
       "titel": "Das Neinhorn",
       "zeit": "15:00",
       "id": "2026-11-15-neinhorn-atze"
+    },
+    {
+      "titel": "Laternenumzug im Wedding an der Roten Ella",
+      "datum": "2026-11-15",
+      "zeit": "16:00",
+      "ort": "Stadtteilkomitee Wedding",
+      "bezirk": "Wedding",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Ein Laternenumzug für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/berlin",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-15-laternenumzug-im-wedding-an-der-roten-el"
+    },
+    {
+      "alter": "Kinder & Familien",
+      "beschreibung": "Tanzen mit Kindermusik im großen Haus am Spreeufer.",
+      "bezirk": "Tiergarten",
+      "datum": "2026-11-15",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor",
+        "musik",
+        "bewegung"
+      ],
+      "lat": 52.5186,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.365,
+      "ort": "Haus der Kulturen der Welt",
+      "pankow": false,
+      "preis": "",
+      "quelle": "kindaling.de",
+      "titel": "Kinderdisco im Haus der Kulturen der Welt",
+      "zeit": "",
+      "id": "2026-11-15-kinderdisco-hkw"
     },
     {
       "alter": "Familien",
@@ -163,25 +418,223 @@
       "id": "2026-11-19-eltern-kind-treff-pankow"
     },
     {
-      "alter": "ab 3 Jahren",
-      "beschreibung": "Festival mit hunderten Märchenlesungen, Erzähltheatern und Mitmachaktionen, auch in Bibliotheken im Kiez.",
-      "bezirk": "stadtweit",
-      "bis": "2026-11-22",
-      "datum": "2026-11-05",
-      "gefunden": "2026-11-14T08:25:00+01:00",
-      "imRing": true,
+      "titel": "Baby an Bord – Stimme an!",
+      "datum": "2026-11-20",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Prenzlauer Berg",
       "kategorien": [
-        "theater",
+        "indoor",
+        "fest",
+        "musik"
+      ],
+      "alter": "0-6 J",
+      "preis": "",
+      "beschreibung": "Musikalisches Angebot für Babys und Kleinkinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/baby-an-bord-stimme-an/berlin-prenzlauer-berg",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-20-baby-an-bord-stimme-an"
+    },
+    {
+      "titel": "Bundesweiter Vorlesetag",
+      "datum": "2026-11-20",
+      "zeit": "",
+      "ort": "verschiedene Orte",
+      "bezirk": "stadtweit",
+      "kategorien": [
         "indoor"
       ],
-      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/",
-      "ort": "viele Orte in ganz Berlin",
-      "pankow": true,
-      "preis": "oft kostenlos",
+      "alter": "",
+      "preis": "",
+      "beschreibung": "In ganz Berlin finden Veranstaltungen statt, um die Freude am Lesen bei Kindern zu wecken.",
       "quelle": "berlin.de",
-      "titel": "Berliner Märchentage",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.berlin.de/events/2783792-2229501-bundesweiter-vorlesetag-berlin.html",
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-20-bundesweiter-vorlesetag"
+    },
+    {
+      "titel": "Weihnachtsmarkt auf der Lohmühleninsel",
+      "datum": "2026-11-20",
       "zeit": "",
-      "id": "2026-11-22-maerchentage"
+      "ort": "Flutgraben",
+      "bezirk": "Treptow-Köpenick",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Ein gemeinsamer Weihnachtsmarkt am Ufer des Flutgrabens.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "bis": "2026-12-20",
+      "link": "https://www.berlin.de/weihnachtsmarkt/10734992-3496862-weihnachtsmarkt-auf-der-lohmuehleninsel.html",
+      "lat": 52.4965,
+      "lng": 13.4498,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-20-weihnachtsmarkt-auf-der-lohmuehleninsel"
+    },
+    {
+      "titel": "Hör mal! Wir machen ein Hörspiel",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "3-6 J",
+      "preis": "",
+      "beschreibung": "Kreatives Angebot zur Hörspielgestaltung.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/hoer-mal-wir-machen-ein-hoerspiel/berlin-prenzlauer-berg",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-21-hoer-mal-wir-machen-ein-hoerspiel"
+    },
+    {
+      "titel": "MerciPalais",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "PalaisPopulaire",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "5-6 J",
+      "preis": "ab 0 €",
+      "beschreibung": "Veranstaltung im PalaisPopulaire für Familien.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/mercipalais-palaispopulaire/berlin-mitte",
+      "lat": 52.5171,
+      "lng": 13.3961,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-mercipalais"
+    },
+    {
+      "titel": "Novemberlicht Kiezfest",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "Niederschönhausen",
+      "bezirk": "Niederschönhausen",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Kiezfest mit Musik, Mitmachangeboten und Leckereien.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.berlin.de/events/10749512-2229501-novemberlicht-kiezfest.html",
+      "lat": 52.5783,
+      "lng": 13.4057,
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-21-novemberlicht-kiezfest"
+    },
+    {
+      "titel": "Zero Waste Future Festival",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "NochMall",
+      "bezirk": "Tempelhof",
+      "kategorien": [
+        "indoor",
+        "workshop"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Festival mit Workshops zu Upcycling, Nachhaltigkeit und Abfallvermeidung.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.berlin.de/events/6355099-2229501-zero-waste-future-festival.html",
+      "lat": 52.5691,
+      "lng": 13.3279,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-zero-waste-future-festival"
+    },
+    {
+      "titel": "MerciPalais",
+      "datum": "2026-11-22",
+      "zeit": "",
+      "ort": "PalaisPopulaire",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "5-6 J",
+      "preis": "ab 0 €",
+      "beschreibung": "Veranstaltung im PalaisPopulaire für Familien.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/mercipalais-palaispopulaire/berlin-mitte",
+      "lat": 52.5171,
+      "lng": 13.3961,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-22-mercipalais"
+    },
+    {
+      "titel": "Workshop für Geschwister von Kindern mit Behinderung",
+      "datum": "2026-11-22",
+      "zeit": "",
+      "ort": "Kindergesundheitshaus",
+      "bezirk": "Neukölln",
+      "kategorien": [
+        "indoor",
+        "workshop"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Austausch, Basteln, Singen und Spielen für Geschwisterkinder.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/10590797-2186128-workshop-fuer-geschwister-von-kindern-mi.html",
+      "lat": 52.5633,
+      "lng": 13.3963,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-22-workshop-fuer-geschwister-von-kindern-mi"
+    },
+    {
+      "titel": "monatliche Spielzeugtauschbörse",
+      "datum": "2026-11-23",
+      "zeit": "17:15",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "fest"
+      ],
+      "alter": "0-6 J",
+      "preis": "",
+      "beschreibung": "Tauschbörse für Spielzeug.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/berlin",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-23-monatliche-spielzeugtauschboerse"
     },
     {
       "alter": "ab 2 Jahren",
@@ -230,27 +683,6 @@
       "id": "2026-11-24-erzaehltheater-arnswalder"
     },
     {
-      "alter": "Eltern mit Babys",
-      "beschreibung": "Kinovorstellung für Eltern, bei der Babys dabei sein dürfen: gedämpfter Ton, etwas Licht, Platz für Kinderwagen.",
-      "bezirk": "Mitte",
-      "datum": "2026-11-25",
-      "gefunden": "2026-11-14T08:25:00+01:00",
-      "imRing": true,
-      "kategorien": [
-        "indoor"
-      ],
-      "lat": 52.526,
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lng": 13.4105,
-      "ort": "Kino Babylon",
-      "pankow": false,
-      "preis": "ab 9 €",
-      "quelle": "kindaling.de",
-      "titel": "Kinderwagenkino im Babylon",
-      "zeit": "11:00",
-      "id": "2026-11-25-kinderwagenkino-babylon"
-    },
-    {
       "alter": "Kita-Kinder",
       "beschreibung": "Orchesterkonzert mit Puppenspiel: Bär, Affe, Löwe und Tiger erleben ein Abenteuer. Kuscheltier mitbringen!",
       "bezirk": "Charlottenburg",
@@ -272,6 +704,27 @@
       "titel": "Das Kuscheltierkonzert",
       "zeit": "11:00",
       "id": "2026-11-25-kuscheltierkonzert"
+    },
+    {
+      "alter": "Eltern mit Babys",
+      "beschreibung": "Kinovorstellung für Eltern, bei der Babys dabei sein dürfen: gedämpfter Ton, etwas Licht, Platz für Kinderwagen.",
+      "bezirk": "Mitte",
+      "datum": "2026-11-25",
+      "gefunden": "2026-11-14T08:25:00+01:00",
+      "imRing": true,
+      "kategorien": [
+        "indoor"
+      ],
+      "lat": 52.526,
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
+      "lng": 13.4105,
+      "ort": "Kino Babylon",
+      "pankow": false,
+      "preis": "ab 9 €",
+      "quelle": "kindaling.de",
+      "titel": "Kinderwagenkino im Babylon",
+      "zeit": "11:00",
+      "id": "2026-11-25-kinderwagenkino-babylon"
     },
     {
       "alter": "Kita-Kinder",
@@ -296,6 +749,95 @@
       "id": "2026-11-27-froschkoenig-galli"
     },
     {
+      "titel": "Baby an Bord – Stimme an!",
+      "datum": "2026-11-27",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "fest",
+        "musik"
+      ],
+      "alter": "0-6 J",
+      "preis": "",
+      "beschreibung": "Musikalisches Angebot für Babys und Kleinkinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/baby-an-bord-stimme-an/berlin-prenzlauer-berg",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-27-baby-an-bord-stimme-an"
+    },
+    {
+      "titel": "Winter Wonderland im Britzer Garten",
+      "datum": "2026-11-27",
+      "zeit": "",
+      "ort": "Britzer Garten",
+      "bezirk": "Neukölln",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Stimmungsvoller Weihnachtsmarkt im Britzer Garten an den Adventswochenenden.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "bis": "2026-12-20",
+      "link": "https://www.berlin.de/weihnachtsmarkt/10720667-3496862-winter-wonderland-im-britzer-garten.html",
+      "lat": 52.4338,
+      "lng": 13.4173,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-27-winter-wonderland-im-britzer-garten"
+    },
+    {
+      "titel": "Tollpatschies Kidsdisco zu Weihnachten",
+      "datum": "2026-11-28",
+      "zeit": "15:00",
+      "ort": "KEGS GmbH",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "indoor",
+        "fest",
+        "musik"
+      ],
+      "alter": "3-6 J",
+      "preis": "",
+      "beschreibung": "Weihnachtliche Kinderdisco.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/berlin",
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-28-tollpatschies-kidsdisco-zu-weihnachten"
+    },
+    {
+      "titel": "Advent im Park",
+      "datum": "2026-11-28",
+      "zeit": "",
+      "ort": "Natur Park Südgelände",
+      "bezirk": "Schöneberg",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "0-6 J",
+      "preis": "",
+      "beschreibung": "Weihnachtliche Veranstaltung im Park.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/advent-im-park-53f5d064-5f99-4b4a-a926-d0e8930d3255/berlin-schoeneberg",
+      "lat": 52.4591,
+      "lng": 13.3565,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-28-advent-im-park"
+    },
+    {
       "alter": "Familien",
       "beschreibung": "Kleiner Adventsmarkt mit Kunsthandwerk und Leckereien, an allen Adventssonntagen.",
       "bezirk": "Prenzlauer Berg",
@@ -316,6 +858,28 @@
       "titel": "Öko-Adventsmarkt am Kollwitzplatz",
       "zeit": "12:00–19:00",
       "id": "2026-11-29-adventsmarkt-kollwitzplatz"
+    },
+    {
+      "titel": "Advent im Park",
+      "datum": "2026-11-29",
+      "zeit": "",
+      "ort": "Natur Park Südgelände",
+      "bezirk": "Schöneberg",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "0-6 J",
+      "preis": "",
+      "beschreibung": "Weihnachtliche Veranstaltung im Park.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-14T10:48:41+01:00",
+      "link": "https://www.kindaling.de/feste/advent-im-park-53f5d064-5f99-4b4a-a926-d0e8930d3255/berlin-schoeneberg",
+      "lat": 52.4591,
+      "lng": 13.3565,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-29-advent-im-park"
     },
     {
       "alter": "Familien",
