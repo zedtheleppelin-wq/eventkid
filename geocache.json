@@ -1,7 +1,15 @@
 {
+ "abenteueroase|steglitz-zehlendorf": [
+  52.4587,
+  13.3474
+ ],
  "altes museum, berlin mitte|mitte": [
   52.5195,
   13.3988
+ ],
+ "astrid-lindgren-bühne|oberschöneweide": [
+  52.4611,
+  13.549
  ],
  "atze musiktheater|wedding": [
   52.5433,
@@ -23,10 +31,15 @@
   52.4579,
   13.5451
  ],
+ "fez-berlin|treptow-köpenick": [
+  52.4614,
+  13.5491
+ ],
  "fez-berlin|wuhlheide": [
   52.4664,
   13.547
  ],
+ "fido - die bühne im bergmannkiez|kreuzberg": null,
  "flutgraben|treptow-köpenick": [
   52.4965,
   13.4498
@@ -35,16 +48,36 @@
   52.4318,
   13.4159
  ],
+ "freilandlabor britz|neukölln": [
+  52.4318,
+  13.4159
+ ],
+ "grips theater|tiergarten": [
+  52.5186,
+  13.3414
+ ],
+ "jugendkunstschule atrium|wittenau": null,
  "karls erlebnis-dorf, wustermark|wustermark": null,
  "kegs gmbh|weißensee": null,
  "kindergesundheitshaus|neukölln": [
   52.5633,
   13.3963
  ],
+ "kindermusiktheater e.v.|waidmannslust": null,
  "kindermusiktheater e.v.|wittenau": null,
+ "kurt mühlenhaupt museum|kreuzberg": [
+  52.4877,
+  13.3885
+ ],
+ "labsaal, waidmannslust|reinickendorf": null,
+ "laura la risa|kreuzberg": null,
  "markusplatz|steglitz-zehlendorf": [
   52.4492,
   13.3422
+ ],
+ "mouse & bear books|friedrichshain": [
+  52.508,
+  13.4668
  ],
  "natur park südgelände|schöneberg": [
   52.4591,
@@ -58,11 +91,23 @@
   52.4918,
   13.2361
  ],
+ "naturschutzzentrum ökowerk|steglitz-zehlendorf": [
+  52.4918,
+  13.2361
+ ],
  "niederschönhausen|niederschönhausen": [
   52.5783,
   13.4057
  ],
+ "niederschönhausen|pankow": [
+  52.5858,
+  13.4014
+ ],
  "nochmall|tempelhof": [
+  52.5691,
+  13.3279
+ ],
+ "nochmall|tempelhof-schöneberg": [
   52.5691,
   13.3279
  ],
@@ -85,6 +130,7 @@
   52.5418,
   13.4408
  ],
+ "stadtbibliothek reinickendorf|reinickendorf": null,
  "stadtteilkomitee wedding|wedding": null,
  "strandbad jungfernheide|siemenstadt": [
   52.5439,
@@ -94,12 +140,14 @@
   52.5874,
   13.279
  ],
+ "theater jaro gbr|wilmersdorf": null,
  "wolfdietrich-schnurre-bibliothek, berlin weißensee|weißensee": [
   52.5477,
   13.4528
  ],
  "zentral- und landesbibliothek berlin (zlb), berlin kreuzberg|kreuzberg": null,
  "zero-waste-agentur, berlin tempelhof|tempelhof-schöneberg": null,
+ "zero-waste-agentur|tempelhof": null,
  "zimmer 16|pankow": [
   52.5655,
   13.4014
