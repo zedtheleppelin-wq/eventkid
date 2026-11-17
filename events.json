@@ -1,6 +1,6 @@
 {
   "status": {
-    "letzteSuche": "2026-11-16T15:01:57+01:00",
+    "letzteSuche": "2026-11-17T15:56:05+01:00",
     "horizontTage": 28
   },
   "events": [
@@ -27,117 +27,91 @@
       "alterVon": 3
     },
     {
-      "titel": "Baby Book Club",
-      "datum": "2026-11-16",
-      "zeit": "10:30 Uhr",
-      "ort": "Mouse & Bear Books",
-      "bezirk": "Friedrichshain",
-      "kategorien": [
-        "indoor",
-        "kunst"
-      ],
-      "alter": "ab 0 Jahren",
-      "alterVon": 0,
-      "preis": "",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lat": 52.508,
-      "lng": 13.4668,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-16-baby-book-club"
-    },
-    {
-      "titel": "Eröffnung Wunschbaum-Aktion",
-      "datum": "2026-11-16",
-      "zeit": "13:00 Uhr",
-      "ort": "Stadtbibliothek Pankow",
-      "bezirk": "Prenzlauer Berg",
-      "kategorien": [
-        "indoor",
-        "fest"
-      ],
-      "alter": "",
-      "preis": "",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lat": 52.5418,
-      "lng": 13.4408,
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-16-eroeffnung-wunschbaum-aktion"
-    },
-    {
       "titel": "Das NEINhorn",
-      "datum": "2026-11-16",
-      "zeit": "",
-      "ort": "ATZE Musiktheater",
-      "bezirk": "Wedding",
+      "datum": "2026-11-17",
+      "zeit": "Mehrere Termine",
+      "ort": "ATZE Musiktheater, Berlin Wedding",
+      "bezirk": "Mitte",
       "kategorien": [
-        "indoor",
         "theater"
       ],
       "alter": "ab 4 Jahren",
       "alterVon": 4,
       "preis": "ab 10 €",
-      "beschreibung": "Theateraufführung des beliebten Kinderbuchs für die ganze Familie.",
+      "beschreibung": "",
       "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/das-neinhorn-atze-musiktheater/berlin-wedding",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "link": "https://www.kindaling.de/veranstaltungen/berlin",
       "lat": 52.5433,
       "lng": 13.3516,
       "imRing": true,
       "pankow": false,
-      "id": "2026-11-16-das-neinhorn"
+      "id": "2026-11-17-das-neinhorn"
     },
     {
-      "titel": "Das Rotkäppchen - mit Daniel Wagner",
-      "datum": "2026-11-16",
-      "zeit": "",
-      "ort": "Fido - Die Bühne im Bergmannkiez",
-      "bezirk": "Kreuzberg",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 6 €",
-      "beschreibung": "Eine kindgerechte Inszenierung des Märchenklassikers.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/das-rotkaeppchen-mit-daniel-wagner/berlin-kreuzberg",
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-16-das-rotkaeppchen-mit-daniel-wagner"
-    },
-    {
-      "titel": "Bücherkiste und Liederreise: Lesung und Musik für Babys",
+      "titel": "Bibliotheksnachmittag für die Kleinsten",
       "datum": "2026-11-17",
       "zeit": "",
-      "ort": "Stadtbibliothek Pankow",
+      "ort": "Stadtbibliothek Pankow, Berlin Prenzlauer Berg",
       "bezirk": "Prenzlauer Berg",
       "kategorien": [
-        "indoor",
-        "musik",
         "kunst"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "",
+      "beschreibung": "Nachmittagsangebot mit Vorlesen und kreativen Aktivitäten.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "link": "https://www.kindaling.de/lesungen/bibliotheksnachmittag-fuer-die-kleinsten/berlin-prenzlauer-berg",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-17-bibliotheksnachmittag-fuer-die-kleinsten"
+    },
+    {
+      "titel": "Bücherkiste und Liederreise",
+      "datum": "2026-11-17",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow, Berlin Prenzlauer Berg",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "theater",
+        "musik"
       ],
       "alter": "ab 0 Jahren",
       "alterVon": 0,
       "preis": "",
-      "beschreibung": "",
+      "beschreibung": "Eine Kombination aus Lesung und Musik für die Kleinsten.",
       "quelle": "kindaling.de",
       "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/buecherkiste-und-liederreise-lesung-und-musik-fuer-babys-und/berlin-prenzlauer-berg",
+      "link": "https://www.kindaling.de/lesungen/buecherkiste-und-liederreise/berlin-prenzlauer-berg",
       "lat": 52.5418,
       "lng": 13.4408,
       "imRing": true,
       "pankow": true,
       "id": "2026-11-17-buecherkiste-und-liederreise-lesung-und-"
+    },
+    {
+      "titel": "Geschichten-Kiste",
+      "datum": "2026-11-17",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow, Berlin Weißensee",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "kunst"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Regelmäßige Vorlesestunde für Kinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "bis": "2026-12-15",
+      "link": "https://www.kindaling.de/lesungen/geschichten-kiste/berlin-weissensee",
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-17-geschichten-kiste"
     },
     {
       "titel": "oh peinlich",
@@ -184,6 +158,28 @@
       "titel": "Wintermarkt am Humboldt Forum",
       "zeit": "",
       "id": "2026-11-18-wintermarkt-humboldt-forum"
+    },
+    {
+      "titel": "Zwergenmützchen - Puppenspiel mit dem Theater Kranewit",
+      "datum": "2026-11-18",
+      "zeit": "",
+      "ort": "Fido - Die Bühne im Bergmannkiez",
+      "bezirk": "Kreuzberg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 4 Jahren",
+      "alterVon": 4,
+      "preis": "ab 6 €",
+      "beschreibung": "",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "bis": "2026-11-20",
+      "link": "https://www.kindaling.de/kindertheater-shows/zwergenmuetzchen-puppenspiel-mit-dem-theater-kranewit/berlin-kreuzberg",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
     },
     {
       "alter": "0–2 Jahre",
@@ -300,7 +296,7 @@
         "indoor",
         "fest"
       ],
-      "alter": "ab 3 Jahren",
+      "alter": "3–6 Jahre",
       "alterVon": 3,
       "preis": "unbekannt",
       "beschreibung": "Kreatives Fest rund um das Thema Hörspiel für Kinder ab 3 Jahren.",
@@ -564,7 +560,7 @@
         "indoor",
         "fest"
       ],
-      "alter": "ab 3 Jahren",
+      "alter": "3–6 Jahre",
       "alterVon": 3,
       "preis": "ab 5 €",
       "beschreibung": "Weihnachtliche Kinderdisco für Kinder ab 3 Jahren.",
@@ -642,6 +638,27 @@
       "imRing": true,
       "pankow": true,
       "id": "2026-12-04-baby-an-bord-stimme-an"
+    },
+    {
+      "titel": "Koso Filmfestival",
+      "datum": "2026-12-05",
+      "zeit": "",
+      "ort": "Odeon Kino",
+      "bezirk": "Tempelhof-Schöneberg",
+      "kategorien": [
+        "kunst"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Junge Filmemacher präsentieren ihre Werke auf der großen Leinwand.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "link": "https://www.berlin.de/kino/filmfestivals/10056679-2020379-koso-filmfestival-.html",
+      "lat": 52.4821,
+      "lng": 13.3496,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-12-05-koso-filmfestival"
     },
     {
       "alter": "Familien",
