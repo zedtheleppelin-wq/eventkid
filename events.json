@@ -1,6 +1,6 @@
 {
   "status": {
-    "letzteSuche": "2026-11-17T15:56:05+01:00",
+    "letzteSuche": "2026-11-18T15:36:32+01:00",
     "horizontTage": 28
   },
   "events": [
@@ -27,73 +27,6 @@
       "alterVon": 3
     },
     {
-      "titel": "Das NEINhorn",
-      "datum": "2026-11-17",
-      "zeit": "Mehrere Termine",
-      "ort": "ATZE Musiktheater, Berlin Wedding",
-      "bezirk": "Mitte",
-      "kategorien": [
-        "theater"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 10 €",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-17T15:56:05+01:00",
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lat": 52.5433,
-      "lng": 13.3516,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-17-das-neinhorn"
-    },
-    {
-      "titel": "Bibliotheksnachmittag für die Kleinsten",
-      "datum": "2026-11-17",
-      "zeit": "",
-      "ort": "Stadtbibliothek Pankow, Berlin Prenzlauer Berg",
-      "bezirk": "Prenzlauer Berg",
-      "kategorien": [
-        "kunst"
-      ],
-      "alter": "ab 3 Jahren",
-      "alterVon": 3,
-      "preis": "",
-      "beschreibung": "Nachmittagsangebot mit Vorlesen und kreativen Aktivitäten.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-17T15:56:05+01:00",
-      "link": "https://www.kindaling.de/lesungen/bibliotheksnachmittag-fuer-die-kleinsten/berlin-prenzlauer-berg",
-      "lat": 52.5418,
-      "lng": 13.4408,
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-17-bibliotheksnachmittag-fuer-die-kleinsten"
-    },
-    {
-      "titel": "Bücherkiste und Liederreise",
-      "datum": "2026-11-17",
-      "zeit": "",
-      "ort": "Stadtbibliothek Pankow, Berlin Prenzlauer Berg",
-      "bezirk": "Prenzlauer Berg",
-      "kategorien": [
-        "theater",
-        "musik"
-      ],
-      "alter": "ab 0 Jahren",
-      "alterVon": 0,
-      "preis": "",
-      "beschreibung": "Eine Kombination aus Lesung und Musik für die Kleinsten.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/lesungen/buecherkiste-und-liederreise/berlin-prenzlauer-berg",
-      "lat": 52.5418,
-      "lng": 13.4408,
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-17-buecherkiste-und-liederreise-lesung-und-"
-    },
-    {
       "titel": "Geschichten-Kiste",
       "datum": "2026-11-17",
       "zeit": "",
@@ -114,27 +47,48 @@
       "id": "2026-11-17-geschichten-kiste"
     },
     {
-      "titel": "oh peinlich",
-      "datum": "2026-11-17",
+      "titel": "Bilderbuchkino",
+      "datum": "2026-11-18",
       "zeit": "",
-      "ort": "Grips Theater",
-      "bezirk": "Tiergarten",
+      "ort": "Stadtbibliothek Pankow, Berlin Weißensee",
+      "bezirk": "Pankow",
+      "kategorien": [
+        "indoor",
+        "kunst"
+      ],
+      "alter": "ab 4 Jahren",
+      "alterVon": 4,
+      "preis": "ab 0 €",
+      "beschreibung": "Bilderbuchkino für Kinder in der Stadtbibliothek.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/lesungen/bilderbuchkino-f9c7ac6f-e185-4f7a-898b-42e895cb2da4/berlin-weissensee",
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-18-bilderbuchkino"
+    },
+    {
+      "titel": "Das NEINhorn",
+      "datum": "2026-11-18",
+      "zeit": "",
+      "ort": "ATZE Musiktheater, Berlin Wedding",
+      "bezirk": "Mitte",
       "kategorien": [
         "indoor",
         "theater"
       ],
-      "alter": "ab 5 Jahren",
-      "alterVon": 5,
+      "alter": "ab 4 Jahren",
+      "alterVon": 4,
       "preis": "ab 10 €",
-      "beschreibung": "Theateraufführung für Kinder ab 5 Jahren.",
+      "beschreibung": "Theateraufführung des beliebten Kinderbuchs Das NEINhorn.",
       "quelle": "kindaling.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/oh-peinlich/berlin-tiergarten",
-      "lat": 52.5186,
-      "lng": 13.3414,
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/das-neinhorn-atze-musiktheater/berlin-wedding",
+      "lat": 52.5433,
+      "lng": 13.3516,
       "imRing": true,
       "pankow": false,
-      "id": "2026-11-17-oh-peinlich"
+      "id": "2026-11-18-das-neinhorn"
     },
     {
       "alter": "Familien",
@@ -182,6 +136,73 @@
       "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
     },
     {
+      "titel": "oh peinlich",
+      "datum": "2026-11-18",
+      "zeit": "",
+      "ort": "Grips Theater, Berlin Tiergarten",
+      "bezirk": "Tiergarten",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 5 Jahren",
+      "alterVon": 5,
+      "preis": "ab 10 €",
+      "beschreibung": "Ein Theaterstück für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/oh-peinlich/berlin-tiergarten",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-18-oh-peinlich"
+    },
+    {
+      "titel": "Cometa",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Junges Tanzhaus Berlin, Berlin Neukölln",
+      "bezirk": "Neukölln",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 6 Jahren",
+      "alterVon": 6,
+      "preis": "ab 7 €",
+      "beschreibung": "Eine Tanztheater-Aufführung für Kinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/cometa/berlin-neukoelln",
+      "lat": 52.4839,
+      "lng": 13.4226,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-19-cometa"
+    },
+    {
+      "titel": "Darüber spricht man nicht",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "ATZE Musiktheater, Berlin Wedding",
+      "bezirk": "Wedding",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 6 Jahren",
+      "alterVon": 6,
+      "preis": "ab 10 €",
+      "beschreibung": "Ein Theaterstück für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/darueber-spricht-man-nicht/berlin-wedding",
+      "lat": 52.5433,
+      "lng": 13.3516,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-19-darueber-spricht-man-nicht"
+    },
+    {
       "alter": "0–2 Jahre",
       "beschreibung": "Offener Treff mit Bilderbüchern, Fingerspielen und Liedern für Babys und Kleinkinder. Läuft wöchentlich bis Mitte Dezember.",
       "bezirk": "Prenzlauer Berg",
@@ -203,6 +224,29 @@
       "id": "2026-11-19-eltern-kind-treff-pankow",
       "alterVon": 0,
       "alterBis": 2
+    },
+    {
+      "titel": "Weihnachten mit Bibi & Tina",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Theater des Westens, Berlin Charlottenburg",
+      "bezirk": "Charlottenburg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "ab 15 €",
+      "beschreibung": "Weihnachtliche Show für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-18T15:36:32+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/weihnachten-mit-bibi-tina-theater-des-westens/berlin-charlottenburg",
+      "lat": 52.5059,
+      "lng": 13.329,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-19-weihnachten-mit-bibi-tina"
     },
     {
       "titel": "Baby an Bord – Stimme an!",
@@ -391,7 +435,7 @@
         "fest"
       ],
       "alter": "0–6 Jahre",
-      "preis": "",
+      "preis": "unbekannt",
       "beschreibung": "Tauschbörse für Spielzeug.",
       "quelle": "kindaling.de",
       "gefunden": "2026-11-14T10:48:41+01:00",
