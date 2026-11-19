@@ -23,6 +23,10 @@
   52.5433,
   13.3516
  ],
+ "atze musiktheater|pankow": [
+  52.5433,
+  13.3516
+ ],
  "atze musiktheater|wedding": [
   52.5433,
   13.3516
@@ -40,6 +44,7 @@
   13.4173
  ],
  "feld theater für junges publikum, berlin schöneberg|schöneberg": null,
+ "feld theater für junges publikum|tempelhof-schöneberg": null,
  "fez wuhlheide|oberschöneweide": [
   52.4579,
   13.5451
@@ -54,6 +59,7 @@
  ],
  "fido - die bühne im bergmannkiez, berlin kreuzberg|friedrichshain-kreuzberg": null,
  "fido - die bühne im bergmannkiez, berlin kreuzberg|kreuzberg": null,
+ "fido - die bühne im bergmannkiez|friedrichshain-kreuzberg": null,
  "fido - die bühne im bergmannkiez|kreuzberg": null,
  "flutgraben|treptow-köpenick": [
   52.4965,
@@ -67,13 +73,25 @@
   52.4318,
   13.4159
  ],
+ "friedrichstadt-palast berlin|mitte": [
+  52.5239,
+  13.3889
+ ],
  "grips theater, berlin tiergarten|tiergarten": null,
+ "grips theater|mitte": [
+  52.5186,
+  13.3414
+ ],
  "grips theater|tiergarten": [
   52.5186,
   13.3414
  ],
  "jugendkunstschule atrium|wittenau": null,
  "junges tanzhaus berlin, berlin neukölln|neukölln": [
+  52.4839,
+  13.4226
+ ],
+ "junges tanzhaus berlin|neukölln": [
   52.4839,
   13.4226
  ],
@@ -84,15 +102,22 @@
   13.3963
  ],
  "kindermusiktheater e.v., berlin wittenau|reinickendorf": null,
+ "kindermusiktheater e.v.|reinickendorf": null,
  "kindermusiktheater e.v.|waidmannslust": null,
  "kindermusiktheater e.v.|wittenau": null,
  "kungerkiezinitiative e.v., berlin treptow|treptow": null,
+ "kungerkiezinitiative e.v.|treptow-köpenick": null,
  "kurt mühlenhaupt museum|kreuzberg": [
   52.4877,
   13.3885
  ],
  "labsaal, waidmannslust|reinickendorf": null,
  "laura la risa|kreuzberg": null,
+ "lohmühleninsel, flutgraben|kreuzberg": null,
+ "markusplatz, steglitz|steglitz": [
+  52.4492,
+  13.3422
+ ],
  "markusplatz|steglitz-zehlendorf": [
   52.4492,
   13.3422
@@ -124,6 +149,10 @@
  "niederschönhausen|pankow": [
   52.5858,
   13.4014
+ ],
+ "nochmall, reinickendorf|reinickendorf": [
+  52.5691,
+  13.3279
  ],
  "nochmall|tempelhof": [
   52.5691,
@@ -163,6 +192,11 @@
  ],
  "stadtbibliothek reinickendorf, berlin tegel|reinickendorf": null,
  "stadtbibliothek reinickendorf|reinickendorf": null,
+ "stadtbibliothek reinickendorf|tegel": null,
+ "stadtteilbibliothek buch|buch / karow": [
+  52.6165,
+  13.4917
+ ],
  "stadtteilkomitee wedding|wedding": null,
  "strandbad jungfernheide|siemenstadt": [
   52.5439,
@@ -176,8 +210,13 @@
   52.5059,
   13.329
  ],
+ "theater des westens|charlottenburg-wilmersdorf": [
+  52.5059,
+  13.329
+ ],
  "theater jaro gbr, berlin wilmersdorf|charlottenburg-wilmersdorf": null,
  "theater jaro gbr, berlin wilmersdorf|wilmersdorf": null,
+ "theater jaro gbr|charlottenburg-wilmersdorf": null,
  "theater jaro gbr|wilmersdorf": null,
  "wolfdietrich-schnurre-bibliothek, berlin weißensee|weißensee": [
   52.5477,

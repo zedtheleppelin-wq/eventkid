@@ -1,6 +1,6 @@
 {
   "status": {
-    "letzteSuche": "2026-11-18T15:36:32+01:00",
+    "letzteSuche": "2026-11-19T15:43:57+01:00",
     "horizontTage": 28
   },
   "events": [
@@ -47,50 +47,6 @@
       "id": "2026-11-17-geschichten-kiste"
     },
     {
-      "titel": "Bilderbuchkino",
-      "datum": "2026-11-18",
-      "zeit": "",
-      "ort": "Stadtbibliothek Pankow, Berlin Weißensee",
-      "bezirk": "Pankow",
-      "kategorien": [
-        "indoor",
-        "kunst"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 0 €",
-      "beschreibung": "Bilderbuchkino für Kinder in der Stadtbibliothek.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/lesungen/bilderbuchkino-f9c7ac6f-e185-4f7a-898b-42e895cb2da4/berlin-weissensee",
-      "imRing": false,
-      "pankow": true,
-      "id": "2026-11-18-bilderbuchkino"
-    },
-    {
-      "titel": "Das NEINhorn",
-      "datum": "2026-11-18",
-      "zeit": "",
-      "ort": "ATZE Musiktheater, Berlin Wedding",
-      "bezirk": "Mitte",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 10 €",
-      "beschreibung": "Theateraufführung des beliebten Kinderbuchs Das NEINhorn.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/das-neinhorn-atze-musiktheater/berlin-wedding",
-      "lat": 52.5433,
-      "lng": 13.3516,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-18-das-neinhorn"
-    },
-    {
       "alter": "Familien",
       "beschreibung": "Wintermarkt mit eigenem Rahmenprogramm für Kinder und Familien.",
       "bezirk": "Mitte",
@@ -112,49 +68,6 @@
       "titel": "Wintermarkt am Humboldt Forum",
       "zeit": "",
       "id": "2026-11-18-wintermarkt-humboldt-forum"
-    },
-    {
-      "titel": "Zwergenmützchen - Puppenspiel mit dem Theater Kranewit",
-      "datum": "2026-11-18",
-      "zeit": "",
-      "ort": "Fido - Die Bühne im Bergmannkiez",
-      "bezirk": "Kreuzberg",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 6 €",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-17T15:56:05+01:00",
-      "bis": "2026-11-20",
-      "link": "https://www.kindaling.de/kindertheater-shows/zwergenmuetzchen-puppenspiel-mit-dem-theater-kranewit/berlin-kreuzberg",
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
-    },
-    {
-      "titel": "oh peinlich",
-      "datum": "2026-11-18",
-      "zeit": "",
-      "ort": "Grips Theater, Berlin Tiergarten",
-      "bezirk": "Tiergarten",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 5 Jahren",
-      "alterVon": 5,
-      "preis": "ab 10 €",
-      "beschreibung": "Ein Theaterstück für die ganze Familie.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/oh-peinlich/berlin-tiergarten",
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-18-oh-peinlich"
     },
     {
       "titel": "Cometa",
@@ -226,6 +139,52 @@
       "alterBis": 2
     },
     {
+      "titel": "LEGO-Nachmittag",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Stadtteilbibliothek Buch",
+      "bezirk": "Buch / Karow",
+      "kategorien": [
+        "indoor",
+        "kunst"
+      ],
+      "alter": "ab 4 Jahren",
+      "alterVon": 4,
+      "preis": "unbekannt",
+      "beschreibung": "Kreativer LEGO-Nachmittag für Kinder ab 4 Jahren.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-19T15:43:57+01:00",
+      "link": "https://www.kindaling.de/kreatives/lego-nachmittag-stadtteilbibliothek-buch/berlin-buch-karow",
+      "lat": 52.6165,
+      "lng": 13.4917,
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-19-lego-nachmittag"
+    },
+    {
+      "titel": "SPOOKY Charlottenburg",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Friedrichstadt-Palast Berlin",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 5 Jahren",
+      "alterVon": 5,
+      "preis": "ab 9,80 €",
+      "beschreibung": "Show für Kinder ab 5 Jahren.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-19T15:43:57+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/spooky-charlottenburg/berlin-mitte",
+      "lat": 52.5239,
+      "lng": 13.3889,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-19-spooky-charlottenburg"
+    },
+    {
       "titel": "Weihnachten mit Bibi & Tina",
       "datum": "2026-11-19",
       "zeit": "",
@@ -247,6 +206,51 @@
       "imRing": true,
       "pankow": false,
       "id": "2026-11-19-weihnachten-mit-bibi-tina"
+    },
+    {
+      "titel": "Zwergenmützchen - Puppenspiel mit dem Theater Kranewit",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Fido - Die Bühne im Bergmannkiez",
+      "bezirk": "Kreuzberg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 4 Jahren",
+      "alterVon": 4,
+      "preis": "ab 6 €",
+      "beschreibung": "Ein liebevolles Puppenspiel für Kinder ab 4 Jahren.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-17T15:56:05+01:00",
+      "bis": "2026-11-20",
+      "link": "https://www.kindaling.de/kindertheater-shows/zwergenmuetzchen-puppenspiel-mit-dem-theater-kranewit/berlin-kreuzberg",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
+    },
+    {
+      "titel": "oh peinlich",
+      "datum": "2026-11-19",
+      "zeit": "",
+      "ort": "Grips Theater",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 5 Jahren",
+      "alterVon": 5,
+      "preis": "ab 10 €",
+      "beschreibung": "Theaterstück für Kinder ab 5 Jahren im Grips Theater.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-19T15:43:57+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/oh-peinlich/berlin-tiergarten",
+      "lat": 52.5186,
+      "lng": 13.3414,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-19-oh-peinlich"
     },
     {
       "titel": "Baby an Bord – Stimme an!",
@@ -312,6 +316,29 @@
       "id": "2026-11-20-lesefest-in-einfacher-sprache"
     },
     {
+      "titel": "Vier zurück",
+      "datum": "2026-11-20",
+      "zeit": "",
+      "ort": "Grips Theater",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 2 Jahren",
+      "alterVon": 2,
+      "preis": "ab 8 €",
+      "beschreibung": "Theaterstück für Kleinkinder ab 2 Jahren.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-19T15:43:57+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/vier-zurueck/berlin-mitte",
+      "lat": 52.5186,
+      "lng": 13.3414,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-20-vier-zurueck"
+    },
+    {
       "titel": "Vorlesetag in Berlin",
       "datum": "2026-11-20",
       "zeit": "",
@@ -329,6 +356,27 @@
       "imRing": true,
       "pankow": true,
       "id": "2026-11-20-vorlesetag-in-berlin"
+    },
+    {
+      "titel": "Weihnachtsmarkt auf der Lohmühleninsel",
+      "datum": "2026-11-20",
+      "zeit": "",
+      "ort": "Lohmühleninsel, Flutgraben",
+      "bezirk": "Kreuzberg",
+      "kategorien": [
+        "outdoor",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "Ein neuer Weihnachtsmarkt am Ufer des Flutgrabens mit weihnachtlicher Atmosphäre.",
+      "quelle": "berlin.de",
+      "gefunden": "2026-11-19T15:43:57+01:00",
+      "bis": "2026-12-16",
+      "link": "https://www.berlin.de/weihnachtsmarkt/10734992-3496862-weihnachtsmarkt-auf-der-lohmuehleninsel.html",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-20-weihnachtsmarkt-auf-der-lohmuehleninsel"
     },
     {
       "titel": "Hör mal! Wir machen ein Hörspiel",
