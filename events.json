@@ -1,6 +1,6 @@
 {
   "status": {
-    "letzteSuche": "2026-11-19T15:43:57+01:00",
+    "letzteSuche": "2026-11-20T15:24:47+01:00",
     "horizontTage": 28
   },
   "events": [
@@ -70,144 +70,6 @@
       "id": "2026-11-18-wintermarkt-humboldt-forum"
     },
     {
-      "titel": "Cometa",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Junges Tanzhaus Berlin, Berlin Neukölln",
-      "bezirk": "Neukölln",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 6 Jahren",
-      "alterVon": 6,
-      "preis": "ab 7 €",
-      "beschreibung": "Eine Tanztheater-Aufführung für Kinder.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/cometa/berlin-neukoelln",
-      "lat": 52.4839,
-      "lng": 13.4226,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-19-cometa"
-    },
-    {
-      "titel": "Darüber spricht man nicht",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "ATZE Musiktheater, Berlin Wedding",
-      "bezirk": "Wedding",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 6 Jahren",
-      "alterVon": 6,
-      "preis": "ab 10 €",
-      "beschreibung": "Ein Theaterstück für die ganze Familie.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/darueber-spricht-man-nicht/berlin-wedding",
-      "lat": 52.5433,
-      "lng": 13.3516,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-19-darueber-spricht-man-nicht"
-    },
-    {
-      "alter": "0–2 Jahre",
-      "beschreibung": "Offener Treff mit Bilderbüchern, Fingerspielen und Liedern für Babys und Kleinkinder. Läuft wöchentlich bis Mitte Dezember.",
-      "bezirk": "Prenzlauer Berg",
-      "datum": "2026-11-19",
-      "gefunden": "2026-11-14T08:25:00+01:00",
-      "imRing": true,
-      "kategorien": [
-        "indoor"
-      ],
-      "lat": 52.539,
-      "link": "https://www.kindaling.de/veranstaltungen/berlin",
-      "lng": 13.435,
-      "ort": "Stadtbibliothek Pankow",
-      "pankow": true,
-      "preis": "kostenlos",
-      "quelle": "kindaling.de",
-      "titel": "Eltern-Kind-Treff in der Bibliothek",
-      "zeit": "",
-      "id": "2026-11-19-eltern-kind-treff-pankow",
-      "alterVon": 0,
-      "alterBis": 2
-    },
-    {
-      "titel": "LEGO-Nachmittag",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Stadtteilbibliothek Buch",
-      "bezirk": "Buch / Karow",
-      "kategorien": [
-        "indoor",
-        "kunst"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "unbekannt",
-      "beschreibung": "Kreativer LEGO-Nachmittag für Kinder ab 4 Jahren.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-19T15:43:57+01:00",
-      "link": "https://www.kindaling.de/kreatives/lego-nachmittag-stadtteilbibliothek-buch/berlin-buch-karow",
-      "lat": 52.6165,
-      "lng": 13.4917,
-      "imRing": false,
-      "pankow": true,
-      "id": "2026-11-19-lego-nachmittag"
-    },
-    {
-      "titel": "SPOOKY Charlottenburg",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Friedrichstadt-Palast Berlin",
-      "bezirk": "Mitte",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 5 Jahren",
-      "alterVon": 5,
-      "preis": "ab 9,80 €",
-      "beschreibung": "Show für Kinder ab 5 Jahren.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-19T15:43:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/spooky-charlottenburg/berlin-mitte",
-      "lat": 52.5239,
-      "lng": 13.3889,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-19-spooky-charlottenburg"
-    },
-    {
-      "titel": "Weihnachten mit Bibi & Tina",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Theater des Westens, Berlin Charlottenburg",
-      "bezirk": "Charlottenburg",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 3 Jahren",
-      "alterVon": 3,
-      "preis": "ab 15 €",
-      "beschreibung": "Weihnachtliche Show für die ganze Familie.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-18T15:36:32+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/weihnachten-mit-bibi-tina-theater-des-westens/berlin-charlottenburg",
-      "lat": 52.5059,
-      "lng": 13.329,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-19-weihnachten-mit-bibi-tina"
-    },
-    {
       "titel": "Zwergenmützchen - Puppenspiel mit dem Theater Kranewit",
       "datum": "2026-11-19",
       "zeit": "",
@@ -230,27 +92,48 @@
       "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
     },
     {
-      "titel": "oh peinlich",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Grips Theater",
+      "titel": "Krabbelgruppe im Nachbarschaftshaus Urbanstraße",
+      "datum": "2026-11-20",
+      "zeit": "10:00 Uhr",
+      "ort": "Nachbarschaftshaus Urbanstraße",
+      "bezirk": "Kreuzberg",
+      "kategorien": [
+        "indoor",
+        "bewegung"
+      ],
+      "alter": "ab 0 Jahren",
+      "alterVon": 0,
+      "preis": "",
+      "beschreibung": "",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-20T15:24:47+01:00",
+      "link": "https://www.kindaling.de/sonstige-veranstaltungen/krabbelgruppe-im-nachbarschaftshaus-urbanstrasse/berlin-kreuzberg",
+      "lat": 52.493,
+      "lng": 13.4076,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-20-krabbelgruppe-im-nachbarschaftshaus-urba"
+    },
+    {
+      "titel": "Familien-Vorlesetag im Samurai Museum",
+      "datum": "2026-11-20",
+      "zeit": "15:00 Uhr",
+      "ort": "Erlebnismuseum Samurai",
       "bezirk": "Mitte",
       "kategorien": [
         "indoor",
-        "theater"
+        "kunst"
       ],
       "alter": "ab 5 Jahren",
       "alterVon": 5,
-      "preis": "ab 10 €",
-      "beschreibung": "Theaterstück für Kinder ab 5 Jahren im Grips Theater.",
+      "preis": "",
+      "beschreibung": "",
       "quelle": "kindaling.de",
-      "gefunden": "2026-11-19T15:43:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/oh-peinlich/berlin-tiergarten",
-      "lat": 52.5186,
-      "lng": 13.3414,
+      "gefunden": "2026-11-20T15:24:47+01:00",
+      "link": "https://www.kindaling.de/lesungen/familien-vorlesetag-im-samurai-museum/berlin-mitte",
       "imRing": true,
       "pankow": false,
-      "id": "2026-11-19-oh-peinlich"
+      "id": "2026-11-20-familien-vorlesetag-im-samurai-museum"
     },
     {
       "titel": "Baby an Bord – Stimme an!",
@@ -295,6 +178,28 @@
       "imRing": true,
       "pankow": true,
       "id": "2026-11-20-bundesweiter-vorlesetag"
+    },
+    {
+      "titel": "Early Learner Music & Play: A Sensory Workshop for Babies",
+      "datum": "2026-11-20",
+      "zeit": "",
+      "ort": "Friendship in the Feld",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "indoor",
+        "musik",
+        "workshop"
+      ],
+      "alter": "ab 0 Jahren",
+      "alterVon": 0,
+      "preis": "ab 20 €",
+      "beschreibung": "Sensorischer Workshop für Babys mit Musik und Spiel.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-20T15:24:47+01:00",
+      "link": "https://www.kindaling.de/montessori/early-learner-music-play-a-sensory-workshop-for-babies-0-2-j/berlin-weissensee",
+      "imRing": false,
+      "pankow": true,
+      "id": "2026-11-20-early-learner-music-play-a-sensory-works"
     },
     {
       "titel": "Lesefest in Einfacher Sprache",

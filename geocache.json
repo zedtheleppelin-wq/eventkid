@@ -43,6 +43,7 @@
   52.4338,
   13.4173
  ],
+ "erlebnismuseum samurai|mitte": null,
  "feld theater für junges publikum, berlin schöneberg|schöneberg": null,
  "feld theater für junges publikum|tempelhof-schöneberg": null,
  "fez wuhlheide|oberschöneweide": [
@@ -76,6 +77,11 @@
  "friedrichstadt-palast berlin|mitte": [
   52.5239,
   13.3889
+ ],
+ "friendship in the feld|weißensee": null,
+ "gertrud-junge-bibliothek|buckow": [
+  52.4257,
+  13.4621
  ],
  "grips theater, berlin tiergarten|tiergarten": null,
  "grips theater|mitte": [
@@ -125,6 +131,10 @@
  "mouse & bear books|friedrichshain": [
   52.508,
   13.4668
+ ],
+ "nachbarschaftshaus urbanstraße|kreuzberg": [
+  52.493,
+  13.4076
  ],
  "natur park südgelände|schöneberg": [
   52.4591,
@@ -218,6 +228,10 @@
  "theater jaro gbr, berlin wilmersdorf|wilmersdorf": null,
  "theater jaro gbr|charlottenburg-wilmersdorf": null,
  "theater jaro gbr|wilmersdorf": null,
+ "vierfelderhof|spandau": [
+  52.4827,
+  13.172
+ ],
  "wolfdietrich-schnurre-bibliothek, berlin weißensee|weißensee": [
   52.5477,
   13.4528
