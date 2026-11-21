@@ -1,6 +1,6 @@
 {
   "status": {
-    "letzteSuche": "2026-11-20T15:24:47+01:00",
+    "letzteSuche": "2026-11-21T14:44:23+01:00",
     "horizontTage": 28
   },
   "events": [
@@ -70,199 +70,6 @@
       "id": "2026-11-18-wintermarkt-humboldt-forum"
     },
     {
-      "titel": "Zwergenmützchen - Puppenspiel mit dem Theater Kranewit",
-      "datum": "2026-11-19",
-      "zeit": "",
-      "ort": "Fido - Die Bühne im Bergmannkiez",
-      "bezirk": "Kreuzberg",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 4 Jahren",
-      "alterVon": 4,
-      "preis": "ab 6 €",
-      "beschreibung": "Ein liebevolles Puppenspiel für Kinder ab 4 Jahren.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-17T15:56:05+01:00",
-      "bis": "2026-11-20",
-      "link": "https://www.kindaling.de/kindertheater-shows/zwergenmuetzchen-puppenspiel-mit-dem-theater-kranewit/berlin-kreuzberg",
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-18-zwergenmuetzchen-puppenspiel-mit-dem-the"
-    },
-    {
-      "titel": "Krabbelgruppe im Nachbarschaftshaus Urbanstraße",
-      "datum": "2026-11-20",
-      "zeit": "10:00 Uhr",
-      "ort": "Nachbarschaftshaus Urbanstraße",
-      "bezirk": "Kreuzberg",
-      "kategorien": [
-        "indoor",
-        "bewegung"
-      ],
-      "alter": "ab 0 Jahren",
-      "alterVon": 0,
-      "preis": "",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-20T15:24:47+01:00",
-      "link": "https://www.kindaling.de/sonstige-veranstaltungen/krabbelgruppe-im-nachbarschaftshaus-urbanstrasse/berlin-kreuzberg",
-      "lat": 52.493,
-      "lng": 13.4076,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-20-krabbelgruppe-im-nachbarschaftshaus-urba"
-    },
-    {
-      "titel": "Familien-Vorlesetag im Samurai Museum",
-      "datum": "2026-11-20",
-      "zeit": "15:00 Uhr",
-      "ort": "Erlebnismuseum Samurai",
-      "bezirk": "Mitte",
-      "kategorien": [
-        "indoor",
-        "kunst"
-      ],
-      "alter": "ab 5 Jahren",
-      "alterVon": 5,
-      "preis": "",
-      "beschreibung": "",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-20T15:24:47+01:00",
-      "link": "https://www.kindaling.de/lesungen/familien-vorlesetag-im-samurai-museum/berlin-mitte",
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-20-familien-vorlesetag-im-samurai-museum"
-    },
-    {
-      "titel": "Baby an Bord – Stimme an!",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "Stadtbibliothek Pankow",
-      "bezirk": "Prenzlauer Berg",
-      "kategorien": [
-        "indoor",
-        "fest",
-        "musik"
-      ],
-      "alter": "0–6 Jahre",
-      "preis": "unbekannt",
-      "beschreibung": "Musikalisches Angebot für Babys und Kleinkinder.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-14T10:48:41+01:00",
-      "link": "https://www.kindaling.de/feste/baby-an-bord-stimme-an/berlin-prenzlauer-berg",
-      "lat": 52.5418,
-      "lng": 13.4408,
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-20-baby-an-bord-stimme-an",
-      "alterVon": 0,
-      "alterBis": 6
-    },
-    {
-      "titel": "Bundesweiter Vorlesetag",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "verschiedene Orte",
-      "bezirk": "stadtweit",
-      "kategorien": [
-        "indoor"
-      ],
-      "alter": "",
-      "preis": "",
-      "beschreibung": "In ganz Berlin finden Veranstaltungen statt, um die Freude am Lesen bei Kindern zu wecken.",
-      "quelle": "berlin.de",
-      "gefunden": "2026-11-14T10:48:41+01:00",
-      "link": "https://www.berlin.de/events/2783792-2229501-bundesweiter-vorlesetag-berlin.html",
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-20-bundesweiter-vorlesetag"
-    },
-    {
-      "titel": "Early Learner Music & Play: A Sensory Workshop for Babies",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "Friendship in the Feld",
-      "bezirk": "Weißensee",
-      "kategorien": [
-        "indoor",
-        "musik",
-        "workshop"
-      ],
-      "alter": "ab 0 Jahren",
-      "alterVon": 0,
-      "preis": "ab 20 €",
-      "beschreibung": "Sensorischer Workshop für Babys mit Musik und Spiel.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-20T15:24:47+01:00",
-      "link": "https://www.kindaling.de/montessori/early-learner-music-play-a-sensory-workshop-for-babies-0-2-j/berlin-weissensee",
-      "imRing": false,
-      "pankow": true,
-      "id": "2026-11-20-early-learner-music-play-a-sensory-works"
-    },
-    {
-      "titel": "Lesefest in Einfacher Sprache",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "Berlin",
-      "bezirk": "stadtweit",
-      "kategorien": [
-        "kunst"
-      ],
-      "alter": "",
-      "preis": "",
-      "beschreibung": "Die Lebenshilfe Berlin veranstaltet ein Lesefest mit zahlreichen Lesungen und Buchvorstellungen in Einfacher Sprache.",
-      "quelle": "berlin.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.berlin.de/kultur-und-tickets/tipps/kinder/inklusiv/10761830-10241461-lesefest-in-einfacher-sprache.html",
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-20-lesefest-in-einfacher-sprache"
-    },
-    {
-      "titel": "Vier zurück",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "Grips Theater",
-      "bezirk": "Mitte",
-      "kategorien": [
-        "indoor",
-        "theater"
-      ],
-      "alter": "ab 2 Jahren",
-      "alterVon": 2,
-      "preis": "ab 8 €",
-      "beschreibung": "Theaterstück für Kleinkinder ab 2 Jahren.",
-      "quelle": "kindaling.de",
-      "gefunden": "2026-11-19T15:43:57+01:00",
-      "link": "https://www.kindaling.de/kindertheater-shows/vier-zurueck/berlin-mitte",
-      "lat": 52.5186,
-      "lng": 13.3414,
-      "imRing": true,
-      "pankow": false,
-      "id": "2026-11-20-vier-zurueck"
-    },
-    {
-      "titel": "Vorlesetag in Berlin",
-      "datum": "2026-11-20",
-      "zeit": "",
-      "ort": "Berlin",
-      "bezirk": "stadtweit",
-      "kategorien": [
-        "kunst"
-      ],
-      "alter": "",
-      "preis": "",
-      "beschreibung": "Zum bundesweiten Vorlesetag finden in ganz Berlin Veranstaltungen statt, um die Freude am Lesen zu wecken.",
-      "quelle": "berlin.de",
-      "gefunden": "2026-11-16T15:01:57+01:00",
-      "link": "https://www.berlin.de/events/2783792-2229501-bundesweiter-vorlesetag-berlin.html",
-      "imRing": true,
-      "pankow": true,
-      "id": "2026-11-20-vorlesetag-in-berlin"
-    },
-    {
       "titel": "Weihnachtsmarkt auf der Lohmühleninsel",
       "datum": "2026-11-20",
       "zeit": "",
@@ -282,6 +89,95 @@
       "imRing": true,
       "pankow": false,
       "id": "2026-11-20-weihnachtsmarkt-auf-der-lohmuehleninsel"
+    },
+    {
+      "titel": "Familienkonzert mit der Band „Das Rolfsrudel“",
+      "datum": "2026-11-21",
+      "zeit": "12:00",
+      "ort": "Philipp-Schaeffer-Bibliothek, Berlin Mitte",
+      "bezirk": "Mitte",
+      "kategorien": [
+        "indoor",
+        "musik"
+      ],
+      "alter": "ab 2 Jahren",
+      "alterVon": 2,
+      "preis": "",
+      "beschreibung": "Ein musikalisches Erlebnis für die ganze Familie.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kinderkonzerte/familienkonzert-mit-der-band-das-rolfsrudel/berlin-mitte",
+      "lat": 52.5316,
+      "lng": 13.3987,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-21-familienkonzert-mit-der-band-das-rolfsru"
+    },
+    {
+      "titel": "Brittas Buch",
+      "datum": "2026-11-21",
+      "zeit": "14:00",
+      "ort": "Raquel",
+      "bezirk": "Charlottenburg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "ab 8 €",
+      "beschreibung": "Eine Theateraufführung für Kinder ab 3 Jahren.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/brittas-buch/berlin-charlottenburg",
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-brittas-buch"
+    },
+    {
+      "titel": "Wäschekorbtheater zum Mitmachen mit Anna Srivastava",
+      "datum": "2026-11-21",
+      "zeit": "14:00",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Weißensee",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "",
+      "preis": "ab 0 €",
+      "beschreibung": "Ein interaktives Theaterstück zum Mitmachen für Kinder.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/waeschekorbtheater-zum-mitmachen-mit-anna-srivastava/berlin-weissensee",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-11-21-waeschekorbtheater-zum-mitmachen-mit-ann"
+    },
+    {
+      "titel": "Darüber spricht man nicht",
+      "datum": "2026-11-21",
+      "zeit": "15:00",
+      "ort": "ATZE Musiktheater",
+      "bezirk": "Wedding",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 6 Jahren",
+      "alterVon": 6,
+      "preis": "ab 10 €",
+      "beschreibung": "Eine Theateraufführung im ATZE Musiktheater.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/darueber-spricht-man-nicht/berlin-wedding",
+      "lat": 52.5433,
+      "lng": 13.3516,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-darueber-spricht-man-nicht"
     },
     {
       "titel": "Hör mal! Wir machen ein Hörspiel",
@@ -306,6 +202,29 @@
       "pankow": true,
       "alterBis": 6,
       "id": "2026-11-21-hoer-mal-wir-machen-ein-hoerspiel"
+    },
+    {
+      "titel": "Komm bald wieder",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "ATZE Musiktheater, Berlin Wedding",
+      "bezirk": "Wedding",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "ab 10 €",
+      "beschreibung": "Kindertheaterstück im ATZE Musiktheater.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/komm-bald-wieder/berlin-wedding",
+      "lat": 52.5433,
+      "lng": 13.3516,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-komm-bald-wieder"
     },
     {
       "titel": "MerciPalais",
@@ -352,6 +271,52 @@
       "imRing": false,
       "pankow": true,
       "id": "2026-11-21-novemberlicht-kiezfest"
+    },
+    {
+      "titel": "Schauspiel mit Puppen: Zirkus Schardam",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "Theater der kleinen Form, Berlin Friedrichshain",
+      "bezirk": "Friedrichshain-Kreuzberg",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "ab 8 €",
+      "beschreibung": "",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/schauspiel-mit-puppen-zirkus-schardam/berlin-friedrichshain",
+      "lat": 52.5118,
+      "lng": 13.4488,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-schauspiel-mit-puppen-zirkus-schardam"
+    },
+    {
+      "titel": "Weihnachten mit Bibi & Tina",
+      "datum": "2026-11-21",
+      "zeit": "",
+      "ort": "Theater des Westens, Berlin Charlottenburg",
+      "bezirk": "Charlottenburg-Wilmersdorf",
+      "kategorien": [
+        "indoor",
+        "theater"
+      ],
+      "alter": "ab 3 Jahren",
+      "alterVon": 3,
+      "preis": "ab 15 €",
+      "beschreibung": "Weihnachtliche Theateraufführung mit Bibi & Tina.",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/kindertheater-shows/weihnachten-mit-bibi-tina-theater-des-westens/berlin-charlottenburg",
+      "lat": 52.5059,
+      "lng": 13.329,
+      "imRing": true,
+      "pankow": false,
+      "id": "2026-11-21-weihnachten-mit-bibi-tina"
     },
     {
       "titel": "MerciPalais",
@@ -721,6 +686,29 @@
       "id": "2026-12-06-zirkusmaus-coq-au-vin",
       "alterVon": 3,
       "alterBis": 11
+    },
+    {
+      "titel": "Baby an Bord – Stimme an!",
+      "datum": "2026-12-11",
+      "zeit": "",
+      "ort": "Stadtbibliothek Pankow",
+      "bezirk": "Prenzlauer Berg",
+      "kategorien": [
+        "indoor",
+        "musik",
+        "fest"
+      ],
+      "alter": "",
+      "preis": "",
+      "beschreibung": "",
+      "quelle": "kindaling.de",
+      "gefunden": "2026-11-21T14:44:23+01:00",
+      "link": "https://www.kindaling.de/feste/baby-an-bord-stimme-an/berlin-prenzlauer-berg",
+      "lat": 52.5418,
+      "lng": 13.4408,
+      "imRing": true,
+      "pankow": true,
+      "id": "2026-12-11-baby-an-bord-stimme-an"
     },
     {
       "alter": "3–11 Jahre",
